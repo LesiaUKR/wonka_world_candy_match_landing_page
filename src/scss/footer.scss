@@ -1,0 +1,15 @@
+.container {
+  @include font(
+    16,
+    24
+  ); // Застосувати розмір шрифту 16px і line-height 24px для мобільних пристроїв
+
+  @include media(mobile) {
+    padding: 0 16px;
+  }
+
+  @include media(desktop) {
+    padding: 0 72px;
+    @include font(18, 28); // Зміна розміру шрифту і line-height для десктопів
+  }
+}

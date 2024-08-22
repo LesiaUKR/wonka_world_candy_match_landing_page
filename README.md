@@ -1,1 +1,4 @@
-# wonka_world_candy_match_landing_page
+# Wonka's World of Candy Match 3
+
+- npm install
+- npm run dev
