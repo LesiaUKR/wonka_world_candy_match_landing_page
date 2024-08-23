@@ -1,6 +1,7 @@
 <header class="header">
   <div class="container">
-    <nav>
+    <!-- NAVIGATION -->
+    <nav class="nav">
       <a
         class="nav-logo"
         href="./index.html"
@@ -49,9 +50,12 @@
         </div>
         <p class="nav-logo-text">Wonka's World of Candy Match 3</p>
       </a>
-
       <ul class="nav-list">
-        <li class="nav-list-item"><a class="nav-list-link" href="">Home</a></li>
+        <li class="nav-list-item">
+          <a class="nav-list-link active-page js-home-page" href="./index.html"
+            >Home</a
+          >
+        </li>
         <li class="nav-list-item">
           <a class="nav-list-link" href="">About the Game</a>
         </li>
@@ -69,5 +73,39 @@
         </li>
       </ul>
     </nav>
+    <!-- BURGER MENU -->
+    <button class="menu-button js-menu-btn" type="button">
+      <svg
+        class="menu-icon"
+        width="20"
+        height="20"
+        aria-label="mobile menu switcher"
+      >
+        <use
+          class="js-icon-cross visually-hidden"
+          href="./img/sprite.svg#icon-menu-close"
+        ></use>
+        <use class="js-icon-burger" href="./img/sprite.svg#icon-menu"></use>
+      </svg>
+    </button>
+
+    <ul class="menu-list js-menu-container">
+      <li class="menu-list-item"><a class="menu-list-link" href="">Home</a></li>
+      <li class="menu-list-item">
+        <a class="menu-list-link" href="">About the Game</a>
+      </li>
+      <li class="menu-list-item">
+        <a class="menu-list-link" href="">How to Play</a>
+      </li>
+      <li class="menu-list-item">
+        <a class="menu-list-link" href="">Reviews</a>
+      </li>
+      <li class="menu-list-item">
+        <a class="menu-list-link" href="">Benefits</a>
+      </li>
+      <li class="menu-list-item">
+        <a class="menu-list-link" href="">Gallery</a>
+      </li>
+    </ul>
   </div>
 </header>
