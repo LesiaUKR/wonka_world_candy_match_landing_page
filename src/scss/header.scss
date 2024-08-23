@@ -1,30 +1,228 @@
+//-----------------------------------------------------
+
+$animation-fast: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+// common styles delete after create container
+.header .container {
+  width: 100%;
+  padding: 0 16px;
+  margin: 0 auto;
+}
+@media screen and (min-width: $mobile) {
+  .header .container {
+    width: $mobile;
+  }
+}
+
+@media screen and (min-width: $desktop) {
+  .header .container {
+    width: $desktop;
+    padding: 0 72px;
+  }
+}
+
+.visually-hidden {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
+}
+
+//--------------------------------------------------------
+@media screen and (max-width: ($desktop - 1px)) {
+  .header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.active-page {
+  color: $_yellow_color;
+}
+
+.hidden-icon {
+  display: none;
+}
+
 .header {
-  padding: 20px 0;
+  position: relative;
+  padding: 8px 0;
+}
+
+.header:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: $_main_color;
+}
+@media screen and (min-width: $desktop) {
+  .header {
+    padding: 16px 0;
+  }
+
+  .header:after {
+    height: 2px;
+    bottom: -2px;
+  }
+}
+.header .container {
+  position: relative;
+}
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-logo {
+  transition: transform $animation-fast;
+  &:hover,
+  &:focus {
+    transform: scale(1.02);
+  }
+  &:focus {
+    outline: 1px solid $_yellow_color;
+  }
+}
+@media screen and (min-width: $desktop) {
+  .nav-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+  }
+}
+
+.nav-logo-thumb {
+  width: 60px;
+  height: 60px;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform $animation-fast;
+}
+@media screen and (min-width: $desktop) {
+  .nav-logo-thumb {
+    width: 94px;
+    height: 94px;
+    border-radius: 24px;
+  }
+}
+
+.nav-logo-text {
+  display: none;
+  color: $_yellow_color;
+  text-align: center;
+
+  -webkit-text-stroke-width: 1;
+  -webkit-text-stroke-color: var(--brown, #915518);
+
+  font-family: 'Spicy Rice';
+  @include font(16, 22);
+
+  line-height: normal;
+  letter-spacing: 0.64px;
+  max-width: 125px;
+
+  text-shadow: 1px 1px 0 #915518, -1px 1px 0 #915518, -1px -1px 0 #915518,
+    1px -1px 0 #915518;
+}
+
+@media screen and (min-width: $desktop) {
+  .nav-logo-text {
+    display: block;
+  }
 }
 
 .nav-list {
+  display: none;
+}
+@media screen and (min-width: $desktop) {
+  .nav-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+  }
+  .nav-list-link {
+    @include font(24, 30);
+    display: inline-block;
+    padding: 24px 0px;
+    font-weight: 600;
+    transition: color $animation-fast, transform $animation-fast;
+    &:hover,
+    &:focus {
+      transform: scale(1.02);
+      color: $_yellow_color;
+    }
+    &:focus {
+      outline: 1px solid $_yellow_color;
+    }
+  }
+}
+
+.menu-list {
+  position: absolute;
+  width: 100%;
+  left: 16px;
+  top: 98px;
+
+  transform: translateX(100%);
+  opacity: 0;
+  visibility: hidden;
+  transition: transform $animation-fast, opacity $animation-fast,
+    visibility $animation-fast;
+}
+.menu-list.is-open {
+  transform: translateX(0%);
+  opacity: 1;
+  visibility: visible;
+}
+
+.menu-list-item:not(:last-child) {
+  margin-bottom: 24px;
+}
+
+.menu-list-link {
+  @include font(24, 30);
+  font-weight: 600;
+  transition: color $animation-fast;
+  &:hover,
+  &:focus {
+    color: $_accent_color;
+  }
+}
+.menu-button {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 40px;
-
-  @include media(tablet) {
-    justify-content: flex-start;
-  }
-
-  @include media(desktop) {
-    justify-content: flex-end;
-  }
-}
-
-.nav-link {
-  font-weight: 500;
-  letter-spacing: 0.02em;
-  @include font(30, 40);
+  border: none;
+  background-color: transparent;
   color: $_main_color;
+  transition: transform $animation-fast, color $animation-fast;
+
+  &:hover,
+  &:focus {
+    transform: scale(1.05);
+  }
+  &:active {
+    color: $_accent_color;
+  }
+}
+.menu-icon {
+  stroke: currentColor;
 }
 
-.nav-link:hover,
-.nav-link:focus {
-  color: $_accent_color;
+@media screen and (min-width: $desktop) {
+  .menu-button {
+    display: none;
+  }
 }
