@@ -8,6 +8,7 @@
 @import './benefits.scss';
 @import './gallery.scss';
 @import './footer.scss';
+@import './privacy.scss';
 
 :root {
   font-family: $font-family;
@@ -29,6 +30,10 @@
   width: 100%;
   margin: 0 auto;
   padding: 0 16px;
+
+  @include media(mobile) {
+    max-width: 320px;
+  }
 
   @include media(desktop) {
     max-width: 1440px;

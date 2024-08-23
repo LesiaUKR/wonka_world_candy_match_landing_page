@@ -29,3 +29,28 @@ screen types:
 
   line-height: math.div(math.round($result * 100), 100);
 }
+
+@mixin title($_fmin, $_fmax, $_ls, $_text) {
+  @include font($_fmin, $_fmax);
+
+  position: relative;
+  font-family: $second_font_family;
+  letter-spacing: #{$_ls}px;
+  background: var(
+    --orange-gradient,
+    linear-gradient(180deg, $_accent_color 0%, $_yellow_color 100%)
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  &::after {
+    content: $_text;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    text-shadow: -4px 4px 0px $_brown_shadow-color, 1px 1px 0 $_brown_color,
+      -1px 1px 0 $_brown_color, -1px -1px 0 $_brown_color,
+      1px -1px 0 $_brown_color;
+  }
+}
