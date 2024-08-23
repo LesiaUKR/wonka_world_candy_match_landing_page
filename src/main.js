@@ -1,1 +1,3 @@
-import './js/burger.js';
+import { burgerMenu } from './js/burger.js';
+
+burgerMenu();
