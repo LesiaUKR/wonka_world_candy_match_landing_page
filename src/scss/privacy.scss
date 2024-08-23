@@ -1,0 +1,48 @@
+.privacy-wrapper {
+  padding: 36px 0 64px;
+  font-feature-settings: 'liga' off;
+  @include media(desktop) {
+    padding: 64px 0 151px;
+    @include font(24, 30);
+  }
+}
+
+.privacy-title {
+  @include title(28, 39, 1.12, attr(text));
+  margin-bottom: 36px;
+  @include media(desktop) {
+    @include title(48, 66, 1.92, attr(text));
+  }
+}
+
+.privacy-subtitle {
+  @include title(24, 33, 0.96, attr(text));
+  margin-bottom: 20px;
+  @include media(desktop) {
+    @include title(32, 44, 1.28, attr(text));
+    margin-bottom: 36px;
+  }
+}
+.privacy-description {
+  margin-bottom: 36px;
+  @include media(desktop) {
+    margin-bottom: 56px;
+  }
+}
+.privacy-section {
+  padding: 18px 0px;
+  &.marketing-section {
+    padding-top: 0px;
+  }
+  @include media(desktop) {
+    padding: 28px 0;
+  }
+}
+
+.privacy-item:not(:last-child),
+.privacy-text:not(:last-child) {
+  margin-bottom: 16px;
+}
+.privacy-text-accent {
+  color: $_yellow_color;
+}
