@@ -1,9 +1,1 @@
-.container {
-  @include media(mobile) {
-    padding: 0 16px;
-  }
 
-  @include media(desktop) {
-    padding: 0 72px;
-  }
-}
