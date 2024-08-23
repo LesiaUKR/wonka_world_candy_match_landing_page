@@ -53,6 +53,6 @@ export default defineConfig(({ command }) => {
         },
       },
     },
-    base: '/vanilla-vite-template',
+    base: '/wonka_world_candy_match_landing_page',
   };
 });
