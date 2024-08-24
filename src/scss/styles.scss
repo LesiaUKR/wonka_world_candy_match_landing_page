@@ -28,7 +28,8 @@
 .container {
   width: 100%;
   margin: 0 auto;
-  padding: 0 16px;
+  padding-left: 16px;
+  padding-right: 16px;
 
   @include media(mobile) {
     max-width: 320px;
@@ -36,15 +37,26 @@
 
   @include media(desktop) {
     max-width: 1440px;
-    padding: 0 72px;
+    padding-left: 72px;
+    padding-right: 72px;
   }
 }
 
 .section {
   padding: 32px 0;
-
+  text-align: center;
   @include media(desktop) {
     padding: 75px 0;
+  }
+}
+
+.section-title {
+  @include title(24, 33, 0.96, attr(text));
+  display: inline-block;
+  margin-bottom: 36px;
+  @include media(desktop) {
+    @include title(48, 66, 1.92, attr(text));
+    margin-bottom: 56px;
   }
 }
 
