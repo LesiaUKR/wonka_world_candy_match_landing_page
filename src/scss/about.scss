@@ -2,16 +2,6 @@
   text-align: center;
 }
 
-.about-title {
-  @include title(24, 33, 0.96, attr(text));
-  display: inline-block;
-  margin-bottom: 36px;
-  @include media(desktop) {
-    @include title(48, 66, 1.92, attr(text));
-    margin-bottom: 56px;
-  }
-}
-
 .about-list-item {
   @include media(desktop) {
     display: flex;
