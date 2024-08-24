@@ -1,0 +1,50 @@
+.about-section {
+  text-align: center;
+}
+
+.about-title {
+  @include title(24, 33, 0.96, attr(text));
+  display: inline-block;
+  margin-bottom: 36px;
+  @include media(desktop) {
+    @include title(48, 66, 1.92, attr(text));
+    margin-bottom: 56px;
+  }
+}
+
+.about-list-item {
+  @include media(desktop) {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 24px;
+  }
+  &:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+}
+
+.about-list-item:not(:last-child) {
+  margin-bottom: 36px;
+  @include media(desktop) {
+    margin-bottom: 56px;
+  }
+}
+
+.about-item-description {
+  text-align: start;
+  margin-bottom: 11px;
+  @include media(desktop) {
+    @include font(24, 30);
+    font-weight: 400;
+  }
+}
+
+.about-img-wrapper {
+  border-radius: 8px;
+  border: 2px solid $_yellow_color;
+  overflow: hidden;
+  @include media(desktop) {
+    flex-shrink: 0;
+  }
+}
