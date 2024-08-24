@@ -133,20 +133,18 @@ header .container {
 }
 
 .overlay {
-  position: absolute;
+  position: fixed;
   left: 0;
   top: 0;
-  width: 100vw;
-  height: 100vh;
-  z-index: 100;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
 
   background-color: $_main_bg_color;
 
-  transform: translateX(100%);
   opacity: 0;
   visibility: hidden;
-  transition: transform $animation-reveal, opacity $animation-reveal,
-    visibility $animation-reveal;
+  transition: opacity $animation-reveal, visibility $animation-reveal;
   pointer-events: none;
   &:after {
     content: '';
@@ -166,18 +164,20 @@ header .container {
     width: 100%;
     margin-bottom: 22px;
   }
+  &.is-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: initial;
+  }
 }
-.overlay.is-open {
-  position: fixed;
-  overflow: hidden;
-  transform: translateX(0%);
-  opacity: 1;
-  visibility: visible;
-  pointer-events: initial;
+.overlay-container {
+  position: relative;
 }
-
-header .container.overlay-container {
+.container.overlay-container {
   flex-direction: column;
+}
+.menu-list {
+  align-self: flex-start;
 }
 .menu-list-item:not(:last-child) {
   margin-bottom: 24px;

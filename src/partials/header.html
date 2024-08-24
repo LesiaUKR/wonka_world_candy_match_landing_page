@@ -72,61 +72,71 @@
     </ul>
   </nav>
   <!-- BURGER MENU -->
-  <button class="menu-button js-open-menu" type="button" aria-expanded="false">
+  <button
+    class="menu-button js-open-menu"
+    type="button"
+    aria-expanded="false"
+    aria-controls="mobile-menu"
+    aria-label="Menu open button"
+    data-menu-open-btn
+  >
     <svg
       class="menu-icon"
       width="20"
       height="20"
-      aria-label="mobile menu switcher"
+      aria-controls="mobile-menu"
+      aria-expanded="false"
+      role="img"
     >
       <use href="./img/sprite.svg#icon-menu"></use>
     </svg>
   </button>
-
-  <div class="overlay js-menu-container">
-    <div class="container overlay-container">
-      <div class="overlay-wrapper">
-        <button class="menu-button js-close-menu" type="button">
-          <svg
-            class="menu-icon"
-            width="20"
-            height="20"
-            aria-label="mobile menu switcher"
-          >
-            <use href="./img/sprite.svg#icon-menu-close"></use>
-          </svg>
-        </button>
-      </div>
-      <ul class="menu-list">
-        <li class="menu-list-item">
-          <a class="menu-list-link js-close-menu" href="./index.html">Home</a>
-        </li>
-        <li class="menu-list-item">
-          <a class="menu-list-link js-link js-close-menu" href="#about"
-            >About the Game</a
-          >
-        </li>
-        <li class="menu-list-item">
-          <a class="menu-list-link js-link js-close-menu" href="#how-to-play"
-            >How to Play</a
-          >
-        </li>
-        <li class="menu-list-item">
-          <a class="menu-list-link js-link js-close-menu" href="#reviews"
-            >Reviews</a
-          >
-        </li>
-        <li class="menu-list-item">
-          <a class="menu-list-link js-link js-close-menu" href="#benefits"
-            >Benefits</a
-          >
-        </li>
-        <li class="menu-list-item">
-          <a class="menu-list-link js-link js-close-menu" href="#gallery"
-            >Gallery</a
-          >
-        </li>
-      </ul>
+</div>
+<!-- OVERLAY -->
+<div class="overlay js-menu-container">
+  <div class="container overlay-container">
+    <div class="overlay-wrapper">
+      <button class="menu-button js-close-menu" type="button">
+        <svg
+          class="menu-icon"
+          width="20"
+          height="20"
+          aria-label="mobile menu switcher"
+        >
+          <use href="./img/sprite.svg#icon-menu-close"></use>
+        </svg>
+      </button>
     </div>
+    <!-- MOBILE NAVIGATION -->
+    <ul class="menu-list">
+      <li class="menu-list-item">
+        <a class="menu-list-link js-close-menu" href="./index.html">Home</a>
+      </li>
+      <li class="menu-list-item">
+        <a class="menu-list-link js-link js-close-menu" href="#about"
+          >About the Game</a
+        >
+      </li>
+      <li class="menu-list-item">
+        <a class="menu-list-link js-link js-close-menu" href="#how-to-play"
+          >How to Play</a
+        >
+      </li>
+      <li class="menu-list-item">
+        <a class="menu-list-link js-link js-close-menu" href="#reviews"
+          >Reviews</a
+        >
+      </li>
+      <li class="menu-list-item">
+        <a class="menu-list-link js-link js-close-menu" href="#benefits"
+          >Benefits</a
+        >
+      </li>
+      <li class="menu-list-item">
+        <a class="menu-list-link js-link js-close-menu" href="#gallery"
+          >Gallery</a
+        >
+      </li>
+    </ul>
   </div>
 </div>
