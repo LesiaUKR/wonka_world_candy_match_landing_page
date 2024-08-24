@@ -1,9 +1,9 @@
 .privacy-container {
   padding-bottom: 64px;
-  padding-top: 36px;
+  padding-top: 112px;
   font-feature-settings: 'liga' off;
   @include media(desktop) {
-    padding-top: 64px;
+    padding-top: 190px;
     padding-bottom: 150px;
     @include font(24, 30);
   }

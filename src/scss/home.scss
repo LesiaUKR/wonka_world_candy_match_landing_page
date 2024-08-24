@@ -1,6 +1,9 @@
 .home-section.section {
-  padding-top: 88px;
+  padding-top: 112px;
   text-align: center;
+  @include media(desktop) {
+    padding-top: 214px;
+  }
 }
 .home-title-wrapper {
   margin-bottom: 64px;
