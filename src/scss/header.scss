@@ -143,7 +143,7 @@ header .container {
   top: 0;
   width: 100%;
   height: 100%;
-  z-index: 999;
+  // z-index: 999;
 
   background-color: $_main_bg_color;
 
@@ -176,8 +176,14 @@ header .container {
   }
 }
 .overlay-container {
-  position: relative;
+  transform: translateX(100%);
+  transition: transform $animation-reveal;
 }
+
+.is-open .overlay-container {
+  transform: translateX(0);
+}
+
 .container.overlay-container {
   flex-direction: column;
 }
