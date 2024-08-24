@@ -112,9 +112,10 @@ header .container {
 }
 @media screen and (min-width: $desktop) {
   .nav-list-link {
-    @include font(24, 30);
-    display: inline-block;
     padding: 24px 0px;
+    @include font(24, 30);
+    letter-spacing: 0.01px;
+    display: inline-block;
     font-weight: 600;
     transition: color $animation-fast, transform $animation-fast;
     &:hover,
@@ -184,6 +185,7 @@ header .container.overlay-container {
 
 .menu-list-link {
   @include font(24, 30);
+  letter-spacing: 0.01px;
   font-weight: 600;
   transition: color $animation-fast;
   &:hover,
