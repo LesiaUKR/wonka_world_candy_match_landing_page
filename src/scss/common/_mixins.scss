@@ -40,14 +40,21 @@ screen types:
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  &::after {
+  &::before {
     content: $_text;
     position: absolute;
     left: 0;
     top: 0;
     z-index: -1;
-    text-shadow: -4px 4px 0px $_brown_shadow-color, 1px 1px 0 $_brown_color,
-      -1px 1px 0 $_brown_color, -1px -1px 0 $_brown_color,
-      1px -1px 0 $_brown_color;
+    text-shadow: 1px 1px 0 $_brown_color, -1px 1px 0 $_brown_color,
+      -1px -1px 0 $_brown_color, 1px -1px 0 $_brown_color;
+  }
+  &::after {
+    content: $_text;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -2;
+    text-shadow: -4px 4px 0px $_brown_shadow-color;
   }
 }
