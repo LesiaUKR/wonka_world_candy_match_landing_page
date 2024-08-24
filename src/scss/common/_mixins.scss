@@ -36,10 +36,7 @@ screen types:
   position: relative;
   font-family: $second_font_family;
   letter-spacing: #{$_ls}px;
-  background: var(
-    --orange-gradient,
-    linear-gradient(180deg, $_accent_color 0%, $_yellow_color 100%)
-  );
+  background: $_orange_gradient;
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;

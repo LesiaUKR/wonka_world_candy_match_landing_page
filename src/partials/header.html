@@ -1,111 +1,137 @@
-<header class="header">
-  <div class="container">
-    <!-- NAVIGATION -->
-    <nav class="nav">
-      <a
-        class="nav-logo"
-        href="./index.html"
-        title="Wonka's World of Candy Match 3"
-        aria-label="site logo"
-      >
-        <div class="nav-logo-thumb">
-          <picture>
-            <source
-              srcset="
-                ./img/logo/desktop/logo-desktop@1x.webp 1x,
-                ./img/logo/desktop/logo-desktop@2x.webp 2x
-              "
-              media="(min-width: 1440px)"
-              type="image/webp"
-            />
-            <source
-              srcset="
-                ./img/logo/desktop/logo-desktop@1x.jpg 1x,
-                ./img/logo/desktop/logo-desktop@2x.jpg 2x
-              "
-              media="(min-width: 1440px)"
-            />
+<div class="container">
+  <!-- NAVIGATION -->
+  <nav class="nav">
+    <a
+      class="nav-logo"
+      href="./index.html"
+      title="Wonka's World of Candy Match 3"
+      aria-label="site logo"
+    >
+      <div class="nav-logo-thumb">
+        <picture>
+          <source
+            srcset="
+              ./img/logo/desktop/logo-desktop@1x.webp 1x,
+              ./img/logo/desktop/logo-desktop@2x.webp 2x
+            "
+            media="(min-width: 1440px)"
+            type="image/webp"
+          />
+          <source
+            srcset="
+              ./img/logo/desktop/logo-desktop@1x.jpg 1x,
+              ./img/logo/desktop/logo-desktop@2x.jpg 2x
+            "
+            media="(min-width: 1440px)"
+          />
 
-            <source
-              srcset="
-                ./img/logo/mobile/logo-mobile@1x.webp 1x,
-                ./img/logo/mobile/logo-mobile@2x.webp 2x
-              "
-              media="(min-width: 320px)"
-              type="image/webp"
-            />
-            <source
-              srcset="
-                ./img/logo/mobile/logo-mobile@1x.jpg 1x,
-                ./img/logo/mobile/logo-mobile@2x.jpg 2x
-              "
-              media="(min-width: 320px)"
-            />
-            <img
-              class="teacher-icon"
-              src="./img/logo/mobile/logo-mobile@1x.jpg"
-              alt="site logo"
-            />
-          </picture>
-        </div>
-        <p class="nav-logo-text">Wonka's World of Candy Match 3</p>
-      </a>
-      <ul class="nav-list">
-        <li class="nav-list-item">
-          <a class="nav-list-link active-page js-home-page" href="./index.html"
+          <source
+            srcset="
+              ./img/logo/mobile/logo-mobile@1x.webp 1x,
+              ./img/logo/mobile/logo-mobile@2x.webp 2x
+            "
+            media="(min-width: 320px)"
+            type="image/webp"
+          />
+          <source
+            srcset="
+              ./img/logo/mobile/logo-mobile@1x.jpg 1x,
+              ./img/logo/mobile/logo-mobile@2x.jpg 2x
+            "
+            media="(min-width: 320px)"
+          />
+          <img
+            class="teacher-icon"
+            src="./img/logo/mobile/logo-mobile@1x.jpg"
+            alt="site logo"
+          />
+        </picture>
+      </div>
+      <p class="nav-logo-text">Wonka's World of Candy Match 3</p>
+    </a>
+    <ul class="nav-list">
+      <li class="nav-list-item">
+        <a class="nav-list-link active-page js-home-page" href="./index.html"
+          >Home</a
+        >
+      </li>
+      <li class="nav-list-item">
+        <a class="nav-list-link js-link" href="#about">About the Game</a>
+      </li>
+      <li class="nav-list-item">
+        <a class="nav-list-link js-link" href="#how-to-play">How to Play</a>
+      </li>
+      <li class="nav-list-item">
+        <a class="nav-list-link js-link" href="#reviews">Reviews</a>
+      </li>
+      <li class="nav-list-item">
+        <a class="nav-list-link js-link" href="#benefits">Benefits</a>
+      </li>
+      <li class="nav-list-item">
+        <a class="nav-list-link js-link" href="#gallery">Gallery</a>
+      </li>
+    </ul>
+  </nav>
+  <!-- BURGER MENU -->
+  <button class="menu-button js-open-menu" type="button" aria-expanded="false">
+    <svg
+      class="menu-icon"
+      width="20"
+      height="20"
+      aria-label="mobile menu switcher"
+    >
+      <use href="./img/sprite.svg#icon-menu"></use>
+    </svg>
+  </button>
+
+  <div class="overlay js-menu-container">
+    <div class="container overlay-container">
+      <div class="overlay-wrapper">
+        <button class="menu-button js-close-menu" type="button">
+          <svg
+            class="menu-icon"
+            width="20"
+            height="20"
+            aria-label="mobile menu switcher"
+          >
+            <use href="./img/sprite.svg#icon-menu-close"></use>
+          </svg>
+        </button>
+      </div>
+      <ul class="menu-list">
+        <li class="menu-list-item">
+          <a
+            class="menu-list-link active-page js-close-menu js-home-page"
+            href="./index.html"
             >Home</a
           >
         </li>
-        <li class="nav-list-item">
-          <a class="nav-list-link" href="">About the Game</a>
+        <li class="menu-list-item">
+          <a class="menu-list-link js-link js-close-menu" href="#about"
+            >About the Game</a
+          >
         </li>
-        <li class="nav-list-item">
-          <a class="nav-list-link" href="">How to Play</a>
+        <li class="menu-list-item">
+          <a class="menu-list-link js-link js-close-menu" href="#how-to-play"
+            >How to Play</a
+          >
         </li>
-        <li class="nav-list-item">
-          <a class="nav-list-link" href="">Reviews</a>
+        <li class="menu-list-item">
+          <a class="menu-list-link js-link js-close-menu" href="#reviews"
+            >Reviews</a
+          >
         </li>
-        <li class="nav-list-item">
-          <a class="nav-list-link" href="">Benefits</a>
+        <li class="menu-list-item">
+          <a class="menu-list-link js-link js-close-menu" href="#benefits"
+            >Benefits</a
+          >
         </li>
-        <li class="nav-list-item">
-          <a class="nav-list-link" href="">Gallery</a>
+        <li class="menu-list-item">
+          <a class="menu-list-link js-link js-close-menu" href="#gallery"
+            >Gallery</a
+          >
         </li>
       </ul>
-    </nav>
-    <!-- BURGER MENU -->
-    <button class="menu-button js-menu-btn" type="button" aria-expanded="false">
-      <svg
-        class="menu-icon"
-        width="20"
-        height="20"
-        aria-label="mobile menu switcher"
-      >
-        <use
-          class="js-icon-cross hidden-icon"
-          href="./img/sprite.svg#icon-menu-close"
-        ></use>
-        <use class="js-icon-burger" href="./img/sprite.svg#icon-menu"></use>
-      </svg>
-    </button>
-
-    <ul class="menu-list js-menu-container">
-      <li class="menu-list-item"><a class="menu-list-link" href="">Home</a></li>
-      <li class="menu-list-item">
-        <a class="menu-list-link" href="">About the Game</a>
-      </li>
-      <li class="menu-list-item">
-        <a class="menu-list-link" href="">How to Play</a>
-      </li>
-      <li class="menu-list-item">
-        <a class="menu-list-link" href="">Reviews</a>
-      </li>
-      <li class="menu-list-item">
-        <a class="menu-list-link" href="">Benefits</a>
-      </li>
-      <li class="menu-list-item">
-        <a class="menu-list-link" href="">Gallery</a>
-      </li>
-    </ul>
+    </div>
   </div>
-</header>
+</div>
