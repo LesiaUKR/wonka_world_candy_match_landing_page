@@ -1,8 +1,10 @@
-.privacy-wrapper {
-  padding: 36px 0 64px;
+.privacy-container {
+  padding-bottom: 64px;
+  padding-top: 36px;
   font-feature-settings: 'liga' off;
   @include media(desktop) {
-    padding: 64px 0 151px;
+    padding-top: 64px;
+    padding-bottom: 150px;
     @include font(24, 30);
   }
 }
@@ -18,9 +20,22 @@
 .privacy-subtitle {
   @include title(24, 33, 0.96, attr(text));
   margin-bottom: 20px;
+
+  &.fixed-width-termination {
+    width: 166px;
+  }
+  &.fixed-width-updates {
+    width: 264px;
+  }
   @include media(desktop) {
     @include title(32, 44, 1.28, attr(text));
     margin-bottom: 36px;
+    &.fixed-width-termination {
+      width: auto;
+    }
+    &.fixed-width-updates {
+      width: auto;
+    }
   }
 }
 .privacy-description {
@@ -31,7 +46,7 @@
 }
 .privacy-section {
   padding: 18px 0px;
-  &.marketing-section {
+  &.first-section {
     padding-top: 0px;
   }
   @include media(desktop) {
@@ -45,4 +60,8 @@
 }
 .privacy-text-accent {
   color: $_yellow_color;
+}
+
+.privacy-text.uppercase {
+  text-transform: uppercase;
 }
