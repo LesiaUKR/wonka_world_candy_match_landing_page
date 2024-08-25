@@ -12,12 +12,12 @@
     />
     
     <script type="module" crossorigin src="/wonka_world_candy_match_landing_page/assets/vendor-af36df9a.js"></script>
-    <script type="module" crossorigin src="/wonka_world_candy_match_landing_page/assets/main-ae8ee5d5.js"></script>
-    <link rel="stylesheet" href="/wonka_world_candy_match_landing_page/assets/main-eff72c97.css">
+    <script type="module" crossorigin src="/wonka_world_candy_match_landing_page/assets/main-33b3b4c7.js"></script>
+    <link rel="stylesheet" href="/wonka_world_candy_match_landing_page/assets/main-a5c11be6.css">
   </head>
   <body>
     <header>
-      <div class="container">
+      <div class="container" id="header-container">
   <!-- NAVIGATION -->
   <nav class="nav">
     <a
@@ -51,6 +51,7 @@
             class="teacher-icon"
             src="/wonka_world_candy_match_landing_page/assets/logo-mobile@1x-43e35e1d.jpg"
             alt="site logo"
+            loading="lazy"
           />
         </picture>
       </div>
@@ -58,9 +59,7 @@
     </a>
     <ul class="nav-list">
       <li class="nav-list-item">
-        <a class="nav-list-link active-page js-home-page" href="./index.html"
-          >Home</a
-        >
+        <a class="nav-list-link" href="./index.html">Home</a>
       </li>
       <li class="nav-list-item">
         <a class="nav-list-link js-link" href="#about">About the Game</a>
@@ -80,66 +79,72 @@
     </ul>
   </nav>
   <!-- BURGER MENU -->
-  <button class="menu-button js-open-menu" type="button" aria-expanded="false">
+  <button
+    class="menu-button js-open-menu"
+    type="button"
+    aria-expanded="false"
+    aria-controls="mobile-menu"
+    aria-label="Menu open button"
+    data-menu-open-btn
+  >
     <svg
       class="menu-icon"
       width="20"
       height="20"
-      aria-label="mobile menu switcher"
+      aria-controls="mobile-menu"
+      aria-expanded="false"
+      role="img"
     >
       <use href="/wonka_world_candy_match_landing_page/assets/sprite-b291e29d.svg#icon-menu"></use>
     </svg>
   </button>
-
-  <div class="overlay js-menu-container">
-    <div class="container overlay-container">
-      <div class="overlay-wrapper">
-        <button class="menu-button js-close-menu" type="button">
-          <svg
-            class="menu-icon"
-            width="20"
-            height="20"
-            aria-label="mobile menu switcher"
-          >
-            <use href="/wonka_world_candy_match_landing_page/assets/sprite-b291e29d.svg#icon-menu-close"></use>
-          </svg>
-        </button>
-      </div>
-      <ul class="menu-list">
-        <li class="menu-list-item">
-          <a
-            class="menu-list-link active-page js-close-menu js-home-page"
-            href="./index.html"
-            >Home</a
-          >
-        </li>
-        <li class="menu-list-item">
-          <a class="menu-list-link js-link js-close-menu" href="#about"
-            >About the Game</a
-          >
-        </li>
-        <li class="menu-list-item">
-          <a class="menu-list-link js-link js-close-menu" href="#how-to-play"
-            >How to Play</a
-          >
-        </li>
-        <li class="menu-list-item">
-          <a class="menu-list-link js-link js-close-menu" href="#reviews"
-            >Reviews</a
-          >
-        </li>
-        <li class="menu-list-item">
-          <a class="menu-list-link js-link js-close-menu" href="#benefits"
-            >Benefits</a
-          >
-        </li>
-        <li class="menu-list-item">
-          <a class="menu-list-link js-link js-close-menu" href="#gallery"
-            >Gallery</a
-          >
-        </li>
-      </ul>
+</div>
+<!-- OVERLAY -->
+<div class="overlay js-menu-container">
+  <div class="container overlay-container">
+    <div class="overlay-wrapper">
+      <button class="menu-button js-close-menu" type="button">
+        <svg
+          class="menu-icon"
+          width="20"
+          height="20"
+          aria-label="mobile menu switcher"
+        >
+          <use href="/wonka_world_candy_match_landing_page/assets/sprite-b291e29d.svg#icon-menu-close"></use>
+        </svg>
+      </button>
     </div>
+    <!-- MOBILE NAVIGATION -->
+    <ul class="menu-list">
+      <li class="menu-list-item">
+        <a class="menu-list-link js-close-menu" href="./index.html">Home</a>
+      </li>
+      <li class="menu-list-item">
+        <a class="menu-list-link js-link js-close-menu" href="#about"
+          >About the Game</a
+        >
+      </li>
+      <li class="menu-list-item">
+        <a class="menu-list-link js-link js-close-menu" href="#how-to-play"
+          >How to Play</a
+        >
+      </li>
+      <li class="menu-list-item">
+        <a class="menu-list-link js-link js-close-menu" href="#reviews"
+          >Reviews</a
+        >
+      </li>
+      <li class="menu-list-item">
+        <a class="menu-list-link js-link js-close-menu" href="#benefits"
+          >Benefits</a
+        >
+      </li>
+      <li class="menu-list-item">
+        <a class="menu-list-link js-link js-close-menu" href="#gallery"
+          >Gallery</a
+        >
+      </li>
+    </ul>
   </div>
 </div>
 
@@ -314,7 +319,6 @@
 </div>
 
     </footer>
-    
 
     
   </body>
