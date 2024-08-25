@@ -13,10 +13,9 @@
   height: 230px;
   padding: 10px 0 3px 16px;
 
-  // border: 1px solid red;
   @include media(desktop) {
-    padding: 64px 0 3px 16px;
-    height: 300px;
+    padding: 64px 2px 2px 2px;
+    height: 100%;
   }
 }
 
@@ -28,7 +27,7 @@
   align-items: center;
   gap: 36px;
 
-  width: 280px;
+  width: 282px;
   height: 180px;
   border-radius: 16px;
   outline: 1px solid $_yellow_color;
