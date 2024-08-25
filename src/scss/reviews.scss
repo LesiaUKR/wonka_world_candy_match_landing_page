@@ -1,18 +1,91 @@
-.slider-indicators {
+// .slider-indicators {
+//   display: flex;
+//   justify-content: center;
+//   margin-top: 20px;
+// }
+
+// .slider-indicators .indicator {
+//   width: 10px;
+//   height: 10px;
+//   background-color: #ccc;
+//   border-radius: 50%;
+//   margin: 0 5px;
+//   cursor: pointer;
+// }
+
+// .slider-indicators .indicator.active {
+//   background-color: #333;
+// }
+// .swiper-list {
+//   display: flex;
+//   flex-direction: row;
+//   gap: 16px;
+// }
+.review-container.container {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.swiper-wrap.swiper {
+  width: 100%;
+  height: 215px;
+  padding: 3px 0 3px 16px;
+
+  // border: 1px solid red;
+}
+
+.review-item {
+  position: relative;
   display: flex;
   justify-content: center;
-  margin-top: 20px;
+  flex-direction: column;
+  align-items: center;
+  gap: 36px;
+
+  width: 280px;
+  height: 180px;
+  border-radius: 16px;
+  outline: 1px solid $_yellow_color;
+
+  // Adding the quotation mark at the top center
+  &::before {
+    content: '\0022'; // This is the left double quotation mark
+    -webkit-text-stroke-width: 1;
+    -webkit-text-stroke-color: var(--brown, #915518);
+    position: absolute;
+    z-index: 999;
+    top: -15px; // Adjust this value as needed
+    left: 50%;
+    transform: translateX(-50%);
+    @include font(48, 24);
+    font-family: $second_font_family; // Adjust the size as needed
+    color: $_yellow_color;
+
+    font-weight: $regular; // Match the color with your design
+  }
 }
 
-.slider-indicators .indicator {
-  width: 10px;
-  height: 10px;
-  background-color: #ccc;
-  border-radius: 50%;
-  margin: 0 5px;
-  cursor: pointer;
+.review-text {
+  width: 266px;
+  color: $_main_color;
+  text-align: center;
+  font-family: $font_family;
+  @include font(16, 24);
+  font-style: normal;
+  font-weight: $light;
+  @include media(desktop) {
+    font-weight: $regular;
+  }
 }
 
-.slider-indicators .indicator.active {
-  background-color: #333;
+.review-user {
+  color: #f8f9f3;
+
+  font-family: $font_family;
+  @include font(20, 24);
+  font-style: normal;
+  font-weight: $regular;
+  @include media(desktop) {
+    font-weight: $medium;
+  }
 }
