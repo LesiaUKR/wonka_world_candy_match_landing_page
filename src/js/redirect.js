@@ -4,12 +4,12 @@
 
   const linkRefs = document.querySelectorAll('.js-link');
 
-  const newPathNameArr = location.pathname.split('/');
-  const newPathName = [...newPathNameArr.slice(0, -1), 'index.html'].join('/');
+  const newHref = location.href.replace(/\/[^/]+\.html$/, '/index.html');
 
   linkRefs.forEach(link =>
     link.addEventListener('click', e => {
-      const url = `${location.origin}${newPathName}${link.hash}`;
+      const url = `${newHref}${link.hash}`;
+      console.log(url);
       document.location.replace(url);
     })
   );
