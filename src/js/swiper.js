@@ -1,6 +1,3 @@
-import Swiper from 'swiper';
-import 'swiper/swiper-bundle.css';
-
 let swiper = new Swiper('.swiper', {
   pagination: {
     el: '.swiper-pagination',
