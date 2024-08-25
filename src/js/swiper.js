@@ -1,11 +1,10 @@
-new Swiper(
+const swiper = new Swiper(
   '.swiper',
   // If we need pagination
   {
     pagination: {
       el: '.swiper-pagination',
       clickable: true,
-      // dynamicBullets: true,
     },
     // Включение/отключение
     // перетаскивания на ПК
@@ -33,8 +32,7 @@ new Swiper(
       sensitivity: 1,
     },
     // Количество слайдов для показа
-    slidesPerView: 1.08,
-
+    slidesPerView: 1.07,
     // Отключение функционала
     // если слайдов меньше чем нужно
     watchOverflow: true,
@@ -48,5 +46,37 @@ new Swiper(
     // Активный слайд по центру
     // centeredSlides: true,
     freemode: true,
+
+    breakpoints: {
+      // Define breakpoints
+      1440: {
+        // Desktop size
+        slidesPerView: 4.18,
+        spaceBetween: 36,
+
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+      },
+    },
   }
 );
+
+function updateSwiperSettings() {
+  const windowWidth = window.innerWidth;
+
+  if (windowWidth >= 1440) {
+    swiper.pagination.destroy(); // Remove pagination
+    swiper.pagination.el.style.display = 'none'; // Hide pagination elements
+  } else {
+    swiper.pagination.init(); // Reinitialize pagination
+    swiper.pagination.el.style.display = ''; // Show pagination elements
+  }
+}
+
+// Call the function on page load
+updateSwiperSettings();
+
+// Add an event listener to update settings on resize
+window.addEventListener('resize', updateSwiperSettings);
