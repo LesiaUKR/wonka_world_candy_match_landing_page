@@ -1,0 +1,118 @@
+.home-section.section {
+  padding-top: 112px;
+  text-align: center;
+  @include media(desktop) {
+    padding-top: 214px;
+  }
+}
+.home-title-wrapper {
+  margin-bottom: 64px;
+  @include media(desktop) {
+    max-height: 288px;
+    padding-top: 52px;
+    margin-bottom: 72px;
+  }
+}
+.home-section-container {
+  @include media(desktop) {
+    position: relative;
+  }
+}
+.section-title.home-subtitle {
+  @include media(desktop) {
+    margin-bottom: 43px;
+  }
+}
+
+.home-description {
+  text-transform: uppercase;
+  @include media(desktop) {
+    @include font(30, 37);
+  }
+}
+.home-content {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  min-height: 92px;
+  margin-bottom: 64px;
+
+  @include media(desktop) {
+    position: absolute;
+    top: 0;
+    right: 126px;
+  }
+}
+
+.home-picture {
+  position: absolute;
+  min-width: 176px;
+
+  &:nth-child(odd) {
+    top: 0;
+    right: 0;
+  }
+
+  &:nth-child(even) {
+    left: 0;
+    bottom: 0;
+    @include media(desktop) {
+      left: 870px;
+      top: 203px;
+    }
+  }
+  @include media(desktop) {
+    width: 500px;
+  }
+}
+
+.home-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 auto 64px;
+  padding: 10px 16px 10px 24px;
+  min-width: 170px;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+
+  @include font(12, 15);
+  font-family: $third_font_family;
+  font-weight: 400;
+  text-align: start;
+
+  @include media(desktop) {
+    @include font(16, 19);
+    margin-left: 0;
+    margin-bottom: 166px;
+  }
+
+  border: 1px solid $_button_border_color;
+  border-radius: 8px;
+  color: $_button_text_color;
+  background-color: $_button_bg_color;
+
+  transition: transform $animation_fast;
+  &:hover,
+  &:focus {
+    transform: scale(1.02);
+  }
+}
+.home-button-text {
+  display: block;
+  @include font(16, 24);
+  font-weight: 600;
+  line-height: 1.5;
+  @include media(desktop) {
+    @include font(22, 28);
+  }
+}
+
+.home-button-icon {
+  width: 35px;
+  height: 38px;
+  @include media(desktop) {
+    width: 36px;
+    height: 36px;
+  }
+}

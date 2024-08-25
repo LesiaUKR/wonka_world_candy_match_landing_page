@@ -1,7 +1,12 @@
 header {
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   padding: 8px 0;
   min-height: 76px;
+  z-index: 50;
+  background-color: $_main_bg_color;
   @include media(desktop) {
     padding: 16px 0;
   }
@@ -112,9 +117,10 @@ header .container {
 }
 @media screen and (min-width: $desktop) {
   .nav-list-link {
-    @include font(24, 30);
-    display: inline-block;
     padding: 24px 0px;
+    @include font(24, 30);
+    letter-spacing: 0.01px;
+    display: inline-block;
     font-weight: 600;
     transition: color $animation-fast, transform $animation-fast;
     &:hover,
@@ -132,20 +138,18 @@ header .container {
 }
 
 .overlay {
-  position: absolute;
+  position: fixed;
   left: 0;
   top: 0;
-  width: 100vw;
-  height: 100vh;
-  z-index: 100;
+  width: 100%;
+  height: 100%;
+  // z-index: 999;
 
   background-color: $_main_bg_color;
 
-  transform: translateX(100%);
   opacity: 0;
   visibility: hidden;
-  transition: transform $animation-reveal, opacity $animation-reveal,
-    visibility $animation-reveal;
+  transition: opacity $animation-reveal, visibility $animation-reveal;
   pointer-events: none;
   &:after {
     content: '';
@@ -165,18 +169,26 @@ header .container {
     width: 100%;
     margin-bottom: 22px;
   }
+  &.is-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: initial;
+  }
 }
-.overlay.is-open {
-  position: fixed;
-  overflow: hidden;
-  transform: translateX(0%);
-  opacity: 1;
-  visibility: visible;
-  pointer-events: initial;
+.overlay-container {
+  transform: translateX(100%);
+  transition: transform $animation-reveal;
 }
 
-header .container.overlay-container {
+.is-open .overlay-container {
+  transform: translateX(0);
+}
+
+.container.overlay-container {
   flex-direction: column;
+}
+.menu-list {
+  align-self: flex-start;
 }
 .menu-list-item:not(:last-child) {
   margin-bottom: 24px;
@@ -184,6 +196,7 @@ header .container.overlay-container {
 
 .menu-list-link {
   @include font(24, 30);
+  letter-spacing: 0.01px;
   font-weight: 600;
   transition: color $animation-fast;
   &:hover,
