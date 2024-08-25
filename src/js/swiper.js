@@ -1,65 +1,64 @@
-const swiper = new Swiper(
-  '.swiper',
-  // If we need pagination
-  {
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
-    },
-    // Включение/отключение
-    // перетаскивания на ПК
-    simulateTouch: true,
-    // Курсор перетаскивания
-    grabCursor: true,
+import Swiper from 'swiper';
+import 'swiper/swiper-bundle.css';
 
-    // Управление клавиатурой
-    keyboard: {
-      // Включить\выключить
-      enabled: true,
-      // Включить\выключить
-      // только когда слайдер
-      // в пределах вьюпорта
-      onlyInViewport: true,
-      // Включить\выключить
-      // управление клавишами
-      // pageUp, pageDown
-      pageUpDown: true,
-    },
+let swiper = new Swiper('.swiper', {
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+  // Включение/отключение
+  // перетаскивания на ПК
+  simulateTouch: true,
+  // Курсор перетаскивания
+  grabCursor: true,
 
-    // Управление колесом мыши
-    mousewheel: {
-      // Чувствительность колеса мыши
-      sensitivity: 1,
-    },
-    // Количество слайдов для показа
-    slidesPerView: 1,
-    // Отключение функционала
-    // если слайдов меньше чем нужно
-    watchOverflow: true,
+  // Управление клавиатурой
+  keyboard: {
+    // Включить\выключить
+    enabled: true,
+    // Включить\выключить
+    // только когда слайдер
+    // в пределах вьюпорта
+    onlyInViewport: true,
+    // Включить\выключить
+    // управление клавишами
+    // pageUp, pageDown
+    pageUpDown: true,
+  },
 
-    // Отступ между слайдами
-    spaceBetween: 16,
+  // Управление колесом мыши
+  mousewheel: {
+    // Чувствительность колеса мыши
+    sensitivity: 1,
+  },
+  // Количество слайдов для показа
+  slidesPerView: 1,
+  // Отключение функционала
+  // если слайдов меньше чем нужно
+  watchOverflow: true,
 
-    // Количество пролистываемых слайдов
-    slidesPerGroup: 1,
+  // Отступ между слайдами
+  spaceBetween: 16,
 
-    // Активный слайд по центру
-    // centeredSlides: true,
-    freemode: true,
+  // Количество пролистываемых слайдов
+  slidesPerGroup: 1,
 
-    breakpoints: {
-      1440: {
-        slidesPerView: 4,
-        spaceBetween: 56,
+  // Активный слайд по центру
+  // centeredSlides: true,
+  freemode: true,
 
-        navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
-        },
+  breakpoints: {
+    1440: {
+      slidesPerView: 4,
+      spaceBetween: 56,
+
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
       },
     },
-  }
-);
+  },
+});
 
 function updateSwiperSettings() {
   const windowWidth = window.innerWidth;
@@ -73,8 +72,6 @@ function updateSwiperSettings() {
   }
 }
 
-// Call the function on page load
 updateSwiperSettings();
 
-// Add an event listener to update settings on resize
 window.addEventListener('resize', updateSwiperSettings);
