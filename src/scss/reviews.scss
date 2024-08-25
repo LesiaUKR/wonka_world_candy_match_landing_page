@@ -1,18 +1,134 @@
-.slider-indicators {
+.review-container.container {
+  padding-left: 0;
+  padding-right: 0;
+
+  @include media(desktop) {
+    padding-left: 72px;
+    padding-right: 72px;
+  }
+}
+
+.swiper-wrap.swiper {
+  width: 100%;
+  height: 230px;
+  padding: 10px 0 3px 16px;
+
+  // border: 1px solid red;
+  @include media(desktop) {
+    padding: 64px 0 3px 16px;
+    height: 300px;
+  }
+}
+
+.review-item {
+  position: relative;
   display: flex;
   justify-content: center;
-  margin-top: 20px;
+  flex-direction: column;
+  align-items: center;
+  gap: 36px;
+
+  width: 280px;
+  height: 180px;
+  border-radius: 16px;
+  outline: 1px solid $_yellow_color;
+
+  &::before {
+    content: '\201D';
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: $_brown_color;
+    position: absolute;
+    z-index: 999;
+    top: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    @include font(48, 24);
+    font-family: $second_font_family;
+    color: $_yellow_color;
+    font-weight: $regular;
+  }
 }
 
-.slider-indicators .indicator {
-  width: 10px;
-  height: 10px;
-  background-color: #ccc;
-  border-radius: 50%;
-  margin: 0 5px;
-  cursor: pointer;
+.review-text {
+  width: 266px;
+  color: $_main_color;
+  text-align: center;
+  font-family: $font_family;
+  @include font(16, 24);
+  font-style: normal;
+  font-weight: $light;
+  @include media(desktop) {
+    font-weight: $regular;
+  }
 }
 
-.slider-indicators .indicator.active {
-  background-color: #333;
+.review-user {
+  color: #f8f9f3;
+
+  font-family: $font_family;
+  @include font(20, 24);
+  font-style: normal;
+  font-weight: $regular;
+  @include media(desktop) {
+    font-weight: $medium;
+  }
+}
+
+.swiper-pagination {
+  gap: 16px;
+}
+.swiper-pagination .swiper-pagination-bullet {
+  width: 8px;
+  height: 8px;
+  line-height: 20px;
+  background: $_main_color;
+  opacity: 1;
+}
+
+.swiper .swiper-pagination-bullet-active {
+  background-color: $_brown_color;
+}
+
+.swiper .swiper-button-next,
+.swiper .swiper-button-prev {
+  display: none;
+  @include media(desktop) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: px;
+    background-color: transparent;
+    position: absolute;
+    top: 28px;
+    right: 10px; // Adjust this value as needed for proper alignment
+
+    &::after {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 100%;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+}
+
+// Стиль для кнопки "Next"
+.swiper .swiper-button-next {
+  right: 10px; // Відступ справа
+
+  &::after {
+    background-image: url(../img/reviews/fluent_arrow-next.png); // Заміни на правильний шлях до картинки
+  }
+}
+
+// Стиль для кнопки "Prev"
+.swiper .swiper-button-prev {
+  left: 10px; // Відступ зліва
+
+  &::after {
+    background-image: url(../img/reviews/fluent_arrow-prev.png); // Заміни на правильний шлях до картинки
+  }
 }
