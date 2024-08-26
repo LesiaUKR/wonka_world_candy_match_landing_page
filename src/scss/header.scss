@@ -108,7 +108,7 @@ header .container {
   .nav-list-link {
     padding: 24px 0px;
     @include font(24, 30);
-    letter-spacing: 0.01px;
+    letter-spacing: 0.1px;
     display: inline-block;
     font-weight: 600;
     transition: color $animation-fast, transform $animation-fast;
@@ -179,7 +179,7 @@ header .container {
 
 .menu-list-link {
   @include font(24, 30);
-  letter-spacing: 0.01px;
+  letter-spacing: 0.1px;
   font-weight: 600;
   transition: color $animation-fast;
   &:hover,
