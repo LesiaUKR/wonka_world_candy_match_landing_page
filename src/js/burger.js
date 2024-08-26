@@ -1,5 +1,6 @@
 import * as bodyScrollLock from 'body-scroll-lock';
 import debounce from 'lodash.debounce';
+import { scrollToTop } from './helpers/scrollToTop.js';
 
 export const burgerMenu = () => {
   const mobileMenu = document.querySelector('.js-menu-container');
@@ -24,6 +25,7 @@ export const burgerMenu = () => {
   closeMenuBtns.forEach(closeMenuBtn => {
     closeMenuBtn.addEventListener('click', e => {
       toggleMenu();
+      scrollToTop(e.target.hash);
     });
   });
 

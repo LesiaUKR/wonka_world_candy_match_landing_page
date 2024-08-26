@@ -8,8 +8,9 @@
 
   linkRefs.forEach(link =>
     link.addEventListener('click', e => {
-      const url = `${newHref}${link.hash}`;
-      console.log(url);
+
+      const url = `${location.origin}${newPathName}${link.hash}`;
+
       document.location.replace(url);
     })
   );
