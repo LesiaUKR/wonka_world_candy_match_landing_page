@@ -11,11 +11,33 @@
   }
 }
 
+.htp-thumb {
+  position: relative;
+}
+
 .htp-list {
   $_gap_column: 16px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+
+  @include media(to-desktop) {
+    transition: transform $animation-reveal, opacity $animation-reveal,
+      visibility $animation-reveal;
+    &:first-child {
+      transform: translateX(0);
+    }
+
+    &:last-child {
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translateX(100%);
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+
   @include media(desktop) {
     &:last-child {
       justify-content: center;
@@ -23,6 +45,21 @@
     }
     &:not(:last-child) {
       margin-bottom: 56px;
+    }
+  }
+}
+
+.js-slide-open {
+  @include media(to-desktop) {
+    & .htp-list:first-child {
+      transform: translateX(-100%);
+      opacity: 0;
+      visibility: hidden;
+    }
+    & .htp-list:last-child {
+      transform: translateX(0);
+      opacity: 1;
+      visibility: visible;
     }
   }
 }
