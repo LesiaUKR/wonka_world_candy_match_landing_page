@@ -97,7 +97,7 @@ header .container {
 
   text-shadow: 1px 1px 0 $_brown_color, -1px 1px 0 $_brown_color,
     -1px -1px 0 $_brown_color, 1px -1px 0 $_brown_color;
-
+  transition: letter-spacing $animation-fast;
   @include media(desktop) {
     display: block;
   }
