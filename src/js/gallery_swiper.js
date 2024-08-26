@@ -14,10 +14,6 @@ let gallerySwiper = new Swiper('.gallery-swiper', {
         nextEl: '.gallery-swiper-button-prev',
         prevEl: '.gallery-swiper-button-next',
       },
-      pagination: {
-        el: '.gallery-swiper-pagination',
-        clickable: true,
-      },
     },
   },
 });

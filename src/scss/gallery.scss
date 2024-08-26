@@ -1,5 +1,5 @@
 .gallery-swiper {
-  background-color: $_brown_color;
+  // background-color: $_brown_color;
   border-radius: 16px;
   padding: 0px 0px 40px 0px;
   @include media(desktop) {
@@ -78,9 +78,8 @@
   }
 }
 
-.gallery-swiper-pagination.swiper-pagination {
+.gallery-swiper-pagination .swiper-pagination {
   gap: 16px;
-  display: block;
 }
 .gallery-swiper-pagination .swiper-pagination-bullet {
   width: 8px;
