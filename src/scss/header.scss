@@ -51,12 +51,6 @@ header .container {
 }
 
 .nav-logo {
-  transition: transform $animation-fast;
-  &:hover,
-  &:focus {
-    transform: scale(1.02);
-  }
-
   @include media(desktop) {
     display: flex;
     align-items: center;
