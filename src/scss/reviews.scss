@@ -13,10 +13,9 @@
   height: 230px;
   padding: 10px 0 3px 16px;
 
-  // border: 1px solid red;
   @include media(desktop) {
-    padding: 64px 0 3px 16px;
-    height: 300px;
+    padding: 64px 2px 2px 2px;
+    height: 100%;
   }
 }
 
@@ -28,7 +27,7 @@
   align-items: center;
   gap: 36px;
 
-  width: 280px;
+  width: 282px;
   height: 180px;
   border-radius: 16px;
   outline: 1px solid $_yellow_color;
@@ -97,11 +96,11 @@
     align-items: center;
     justify-content: center;
     width: 48px;
-    height: px;
+    height: 48px;
     background-color: transparent;
     position: absolute;
     top: 28px;
-    right: 10px; // Adjust this value as needed for proper alignment
+    right: 10px;
 
     &::after {
       content: '';
@@ -115,20 +114,18 @@
   }
 }
 
-// Стиль для кнопки "Next"
 .swiper .swiper-button-next {
-  right: 10px; // Відступ справа
+  right: 10px;
 
   &::after {
-    background-image: url(../img/reviews/fluent_arrow-next.png); // Заміни на правильний шлях до картинки
+    background-image: url(../img/reviews/fluent_arrow-next.png);
   }
 }
 
-// Стиль для кнопки "Prev"
 .swiper .swiper-button-prev {
-  left: 10px; // Відступ зліва
+  left: 10px;
 
   &::after {
-    background-image: url(../img/reviews/fluent_arrow-prev.png); // Заміни на правильний шлях до картинки
+    background-image: url(../img/reviews/fluent_arrow-prev.png);
   }
 }
