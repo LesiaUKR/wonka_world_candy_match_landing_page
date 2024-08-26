@@ -2,7 +2,7 @@
   padding-top: 112px;
   text-align: center;
   @include media(desktop) {
-    padding-top: 266px;
+    padding-top: 214px;
   }
 }
 .home-title-wrapper {
@@ -13,7 +13,7 @@
     margin-bottom: 72px;
   }
 }
-.home-section-container {
+.home-section-container.container {
   @include media(desktop) {
     position: relative;
   }
@@ -42,6 +42,8 @@
     position: absolute;
     top: 0;
     right: 126px;
+    width: 569px;
+    height: 440px;
   }
 }
 
@@ -50,20 +52,15 @@
 
   min-height: 80px;
   min-width: 176px;
-  background-color: $_main_bg_color;
 
-  &:nth-child(odd) {
+  &:first-child {
     top: 0;
     right: 0;
   }
 
-  &:nth-child(even) {
+  &:last-child {
     left: 0;
     bottom: 0;
-    @include media(desktop) {
-      left: 870px;
-      top: 203px;
-    }
   }
   @include media(desktop) {
     width: 500px;
