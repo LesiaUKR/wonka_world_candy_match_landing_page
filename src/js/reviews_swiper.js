@@ -1,7 +1,7 @@
 let swiper = new Swiper('.swiper', {
   pagination: {
-    el: '.swiper-pagination',
-    clickable: true,
+    el: '.reviews-swiper-pagination',
+    // clickable: true,
   },
   // Включение/отключение
   // перетаскивания на ПК
@@ -56,19 +56,3 @@ let swiper = new Swiper('.swiper', {
     },
   },
 });
-
-function updateSwiperSettings() {
-  const windowWidth = window.innerWidth;
-
-  if (windowWidth >= 1440) {
-    swiper.pagination.destroy();
-    swiper.pagination.el.style.display = 'none';
-  } else {
-    swiper.pagination.init();
-    swiper.pagination.el.style.display = '';
-  }
-}
-
-updateSwiperSettings();
-
-window.addEventListener('resize', updateSwiperSettings);
