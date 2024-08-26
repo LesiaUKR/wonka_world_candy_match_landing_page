@@ -13,17 +13,23 @@
 
 .htp-thumb {
   position: relative;
+  overflow: hidden;
+  width: 100%;
 }
 
 .htp-list {
+  position: relative;
+
   $_gap_column: 16px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  gap: 26px 16px;
 
   @include media(to-desktop) {
     transition: transform $animation-reveal, opacity $animation-reveal,
       visibility $animation-reveal;
+
     &:first-child {
       transform: translateX(0);
     }
@@ -31,10 +37,11 @@
     &:last-child {
       position: absolute;
       top: 0;
-      left: 0;
+      right: 0;
       transform: translateX(100%);
       opacity: 0;
       visibility: hidden;
+      z-index: 10;
     }
   }
 
