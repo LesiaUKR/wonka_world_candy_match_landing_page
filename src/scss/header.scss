@@ -57,6 +57,14 @@ header .container {
     justify-content: center;
     gap: 16px;
   }
+  &:hover &-thumb,
+  &:focus &-thumb {
+    transform: scale(1.02);
+  }
+  &:hover &-text,
+  &:focus &-text {
+    letter-spacing: 0.8px;
+  }
 }
 
 .nav-logo-thumb {
@@ -85,7 +93,7 @@ header .container {
 
   line-height: normal;
   letter-spacing: 0.64px;
-  max-width: 125px;
+  max-width: 130px;
 
   text-shadow: 1px 1px 0 $_brown_color, -1px 1px 0 $_brown_color,
     -1px -1px 0 $_brown_color, 1px -1px 0 $_brown_color;
