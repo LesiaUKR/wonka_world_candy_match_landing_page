@@ -10,6 +10,7 @@
   linkRefs.forEach(link =>
     link.addEventListener('click', e => {
       const url = `${location.origin}${newPathName}${link.hash}`;
+
       document.location.replace(url);
     })
   );
