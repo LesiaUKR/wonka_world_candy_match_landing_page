@@ -51,17 +51,19 @@ header .container {
 }
 
 .nav-logo {
-  transition: transform $animation-fast;
-  &:hover,
-  &:focus {
-    transform: scale(1.02);
-  }
-
   @include media(desktop) {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 16px;
+  }
+  &:hover &-thumb,
+  &:focus &-thumb {
+    transform: scale(1.02);
+  }
+  &:hover &-text,
+  &:focus &-text {
+    letter-spacing: 0.8px;
   }
 }
 
@@ -91,7 +93,7 @@ header .container {
 
   line-height: normal;
   letter-spacing: 0.64px;
-  max-width: 125px;
+  max-width: 130px;
 
   text-shadow: 1px 1px 0 $_brown_color, -1px 1px 0 $_brown_color,
     -1px -1px 0 $_brown_color, 1px -1px 0 $_brown_color;
@@ -114,7 +116,7 @@ header .container {
   .nav-list-link {
     padding: 24px 0px;
     @include font(24, 30);
-    letter-spacing: 0.01px;
+    letter-spacing: 0.1px;
     display: inline-block;
     font-weight: 600;
     transition: color $animation-fast, transform $animation-fast;
@@ -185,7 +187,7 @@ header .container {
 
 .menu-list-link {
   @include font(24, 30);
-  letter-spacing: 0.01px;
+  letter-spacing: 0.1px;
   font-weight: 600;
   transition: color $animation-fast;
   &:hover,
