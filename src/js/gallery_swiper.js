@@ -3,6 +3,9 @@ let gallerySwiper = new Swiper('.gallery-swiper', {
     el: '.gallery-swiper-pagination',
   },
 
+  slidesPerView: 1, // Показувати один слайд
+  centeredSlides: true, // Центрувати активний слайд
+
   spaceBetween: 16,
 
   breakpoints: {
