@@ -1,12 +1,12 @@
 .home-section.section {
-  padding-top: 112px;
+  padding-top: 73px;
   text-align: center;
   @include media(desktop) {
     padding-top: 214px;
   }
 }
 .home-title-wrapper {
-  margin-bottom: 64px;
+  margin-bottom: 45px;
   @include media(desktop) {
     max-height: 288px;
     padding-top: 52px;
@@ -50,8 +50,8 @@
 .home-picture {
   position: absolute;
 
-  min-height: 80px;
-  min-width: 176px;
+  max-height: 80px;
+  max-width: 176px;
 
   &:first-child {
     top: 0;
@@ -63,7 +63,7 @@
     bottom: 0;
   }
   @include media(desktop) {
-    width: 500px;
+    max-width: 500px;
   }
 }
 
