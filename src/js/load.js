@@ -1,8 +1,8 @@
-import { scrollToTop } from './helpers/scrollToTop.js';
+import { navigateTo } from './helpers/navigateTo.js';
 
 (() => {
   const locationHash = document.location.hash;
   if (!locationHash) return;
 
-  window.addEventListener('load', e => scrollToTop(locationHash));
+  window.addEventListener('load', e => navigateTo(locationHash));
 })();
