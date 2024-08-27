@@ -1,48 +1,50 @@
+<!-- HOME SECTION -->
 <section class="home-section section">
   <div class="container home-section-container">
+    <!-- HOME TITLE -->
     <div class="home-title-wrapper">
       <picture>
         <source
           srcset="
-            ./img/hero/desktop/title-desktop@1x.webp 1x,
-            ./img/hero/desktop/title-desktop@2x.webp 2x
+            ./img/hero/desktop/hero-title-desktop@1x.webp 1x,
+            ./img/hero/desktop/hero-title-desktop@2x.webp 2x
           "
           media="(min-width: 1440px)"
           type="image/webp"
         />
         <source
           srcset="
-            ./img/hero/desktop/title-desktop@1x.png 1x,
-            ./img/hero/desktop/title-desktop@2x.png 2x
+            ./img/hero/desktop/hero-title-desktop@1x.png 1x,
+            ./img/hero/desktop/hero-title-desktop@2x.png 2x
           "
           media="(min-width: 1440px)"
         />
 
         <source
           srcset="
-            ./img/hero/mobile/title-mobile@1x.webp 1x,
-            ./img/hero/mobile/title-mobile@2x.webp 2x
+            ./img/hero/mobile/hero-title-mobile@1x.webp 1x,
+            ./img/hero/mobile/hero-title-mobile@2x.webp 2x
           "
           media="(min-width: 320px)"
           type="image/webp"
         />
         <source
           srcset="
-            ./img/hero/mobile/title-mobile@1x.png 1x,
-            ./img/hero/mobile/title-mobile@2x.png 2x
+            ./img/hero/mobile/hero-title-mobile@1x.png 1x,
+            ./img/hero/mobile/hero-title-mobile@2x.png 2x
           "
           media="(min-width: 320px)"
         />
         <img
-          class="teacher-icon"
-          src="./img/hero/mobile/title-mobile@1x.png"
+          src="./img/hero/mobile/hero-title-mobile@1x.png"
           alt="site main title"
           loading="lazy"
         />
       </picture>
     </div>
-
+    <!-- HOME CONTENT-->
     <div class="home-content">
+      <!-- HOME CONTENT PICTURE 1 -->
       <picture class="home-picture">
         <source
           srcset="
@@ -76,13 +78,12 @@
           media="(min-width: 320px)"
         />
         <img
-          class="teacher-icon"
           src="./img/hero/mobile/hero-pict1-mobile@1x.png"
           alt="puzzles game on iphone"
           loading="lazy"
         />
       </picture>
-
+      <!-- HOME CONTENT PICTURE 2 -->
       <picture class="home-picture">
         <source
           srcset="
@@ -116,14 +117,13 @@
           media="(min-width: 320px)"
         />
         <img
-          class="teacher-icon"
           src="./img/hero/mobile/hero-pict2-mobile@1x.png"
           alt="puzzles game on iphone"
           loading="lazy"
         />
       </picture>
     </div>
-
+    <!-- HOME CONTENT GOOGLE PLAY BUTTON -->
     <a
       class="home-button"
       href="https://play.google.com/store/apps/details?id=com.zynga.wonkamatch"
@@ -131,13 +131,39 @@
       rel="noopener noreferrer"
       title="mobile game wonka"
     >
-      <svg class="home-button-icon">
+      <!-- <svg class="home-button-icon">
         <use href="./img/sprite.svg#icon-google-play"></use>
-      </svg>
+      </svg> -->
+      <picture>
+        <source
+          srcset="
+            ./img/hero/hero-google-pic@1x.webp 1x,
+            ./img/hero/hero-google-pic@2x.webp 2x
+          "
+          media="(min-width: 320px)"
+          type="image/webp"
+        />
+        <source
+          srcset="
+            ./img/hero/hero-google-pic@1x.png 1x,
+            ./img/hero/hero-google-pic@2x.png 2x
+          "
+          media="(min-width: 320px)"
+        />
+
+        <img
+          class="home-google-icon"
+          src="./img/hero/hero-google-pic@1x.png"
+          alt="google play icon"
+          loading="lazy"
+        />
+      </picture>
 
       <span>Get it on<span class="home-button-text">Google Play</span></span></a
     >
+    <!-- HOME CONTENT DISCLAIMER TITLE-->
     <h2 class="section-title home-subtitle" text="Disclaimer">Disclaimer</h2>
+    <!-- HOME CONTENT DISCLAIMER DESCRIPTION-->
     <p class="home-description">
       STARLUCKYVENTURES.COM IS A PLATFORM FOR HAVING FUN. THE PROBABILITY OF
       WINNING PLAYING THIS GAME CANNOT BE CONSIDERED THE SAME AS WINNING IN REAL

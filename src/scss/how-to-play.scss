@@ -20,11 +20,10 @@
 .htp-list {
   position: relative;
 
-  $_gap_column: 16px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  gap: 26px 16px;
+  gap: 16px;
 
   @include media(to-desktop) {
     transition: transform $animation-reveal, opacity $animation-reveal,
@@ -50,8 +49,8 @@
       justify-content: center;
       gap: 188px;
     }
-    &:not(:last-child) {
-      margin-bottom: 56px;
+    &:first-child {
+      margin-bottom: 40px;
     }
   }
 }
@@ -98,13 +97,13 @@
   }
 }
 .htp-description {
-  height: 136px;
+  height: 100px;
   overflow-y: hidden;
+  letter-spacing: -0.01px;
 
   @include media(desktop) {
     @include font(20, 25);
     font-weight: $regular;
-    height: 100px;
   }
 }
 

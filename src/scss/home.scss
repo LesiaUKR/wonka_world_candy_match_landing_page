@@ -1,16 +1,19 @@
 .home-section.section {
-  padding-top: 112px;
+  padding-top: 74px;
   text-align: center;
   @include media(desktop) {
-    padding-top: 214px;
+    padding-top: 192px;
   }
 }
 .home-title-wrapper {
-  margin-bottom: 64px;
+  max-width: 270px;
+  margin: 0 auto 50px;
   @include media(desktop) {
-    max-height: 288px;
+    margin: 0 0 72px;
     padding-top: 52px;
-    margin-bottom: 72px;
+    max-height: 288px;
+    max-width: 662px;
+    overflow: hidden;
   }
 }
 .home-section-container.container {
@@ -28,6 +31,7 @@
   text-transform: uppercase;
   @include media(desktop) {
     @include font(30, 37);
+    letter-spacing: 0.2px;
   }
 }
 .home-content {
@@ -43,15 +47,16 @@
     top: 0;
     right: 126px;
     width: 569px;
-    height: 440px;
+    height: 286px;
+    margin-bottom: 0;
   }
 }
 
 .home-picture {
   position: absolute;
 
-  min-height: 80px;
-  min-width: 176px;
+  max-height: 80px;
+  max-width: 176px;
 
   &:first-child {
     top: 0;
@@ -63,7 +68,7 @@
     bottom: 0;
   }
   @include media(desktop) {
-    width: 500px;
+    max-width: 500px;
   }
 }
 
@@ -79,42 +84,68 @@
   max-width: fit-content;
   z-index: 2;
 
-  @include font(12, 15);
-  font-family: $third_font_family;
-  font-weight: 400;
-  text-align: start;
-
-  @include media(desktop) {
-    @include font(16, 19);
-    margin-left: 0;
-    margin-bottom: 166px;
-
-    &:hover,
-    &:focus {
-      &:after {
-        position: absolute;
-        left: 0;
-        top: 0;
-        display: block;
-        content: '';
-        width: 100%;
-        height: 100%;
-        background-color: $_button_bg_color;
-        filter: blur(20px);
-        z-index: -1;
-      }
-    }
-  }
-
   border: 1px solid $_button_border_color;
   border-radius: 8px;
   color: $_button_text_color;
   background-color: $_button_bg_color;
 
+  @include font(12, 15);
+  font-family: $third_font_family;
+  font-weight: 400;
+  text-align: start;
+
   &:active {
     background-color: $_button_border_color;
   }
+
+  @include media(desktop) {
+    @include font(16, 19);
+    margin-left: 0;
+    margin-bottom: 166px;
+    gap: 11px;
+
+    &::after {
+      position: absolute;
+      left: 0;
+      top: 0;
+      display: block;
+      content: '';
+      width: 100%;
+      height: 100%;
+      background-color: transparent;
+      filter: blur(0);
+      z-index: -1;
+      transition: background-color $animation-fast, filter $animation-fast;
+    }
+    &:focus {
+      outline: 1px solid $_accent_color;
+      outline-offset: 4px;
+    }
+    &:hover {
+      &::after {
+        filter: blur(20px);
+        background-color: $_button_bg_color;
+      }
+    }
+    &:active {
+      background-color: $_button_border_color;
+      &::after {
+        background-color: $_button_border_color;
+        filter: blur(0);
+      }
+    }
+  }
 }
+
+.home-google-icon {
+  width: 36px;
+  height: 36px;
+  @include media(desktop) {
+    width: 29px;
+    height: 27px;
+  }
+}
+
 .home-button-text {
   display: block;
   @include font(16, 24);
