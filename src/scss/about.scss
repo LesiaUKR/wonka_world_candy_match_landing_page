@@ -1,9 +1,6 @@
 .about-section {
   text-align: center;
 }
-.about-section .section-title {
-  margin-bottom: 52px;
-}
 
 .about-list-item {
   @include media(desktop) {

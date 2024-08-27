@@ -1,15 +1,16 @@
 .home-section.section {
-  padding-top: 73px;
+  padding-top: 74px;
   text-align: center;
   @include media(desktop) {
     padding-top: 192px;
   }
 }
 .home-title-wrapper {
-  margin-bottom: 45px;
+  max-width: 270px;
+  margin: 0 auto 50px;
   @include media(desktop) {
+    margin: 0 0 72px;
     padding-top: 52px;
-    margin-bottom: 72px;
     max-height: 288px;
     max-width: 662px;
     overflow: hidden;
@@ -101,6 +102,7 @@
     @include font(16, 19);
     margin-left: 0;
     margin-bottom: 166px;
+    gap: 11px;
 
     &::after {
       position: absolute;
@@ -134,6 +136,16 @@
     }
   }
 }
+
+.home-google-icon {
+  width: 36px;
+  height: 36px;
+  @include media(desktop) {
+    width: 29px;
+    height: 27px;
+  }
+}
+
 .home-button-text {
   display: block;
   @include font(16, 24);
