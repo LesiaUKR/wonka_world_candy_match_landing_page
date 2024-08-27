@@ -1,6 +1,9 @@
 .about-section {
   text-align: center;
 }
+.about-section .section-title {
+  margin-bottom: 52px;
+}
 
 .about-list-item {
   @include media(desktop) {
@@ -17,7 +20,7 @@
 .about-list-item:not(:last-child) {
   margin-bottom: 36px;
   @include media(desktop) {
-    margin-bottom: 56px;
+    margin-bottom: 54px;
   }
 }
 
@@ -36,5 +39,7 @@
   overflow: hidden;
   @include media(desktop) {
     flex-shrink: 0;
+    max-width: 744px;
+    border-radius: 24px;
   }
 }

@@ -49,8 +49,8 @@
       justify-content: center;
       gap: 188px;
     }
-    &:not(:last-child) {
-      margin-bottom: 56px;
+    &:first-child {
+      margin-bottom: 40px;
     }
   }
 }
