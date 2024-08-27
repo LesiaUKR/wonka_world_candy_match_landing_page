@@ -4,6 +4,30 @@
     padding-bottom: 63px;
   }
 }
+.htp-section .container {
+  position: relative;
+  &::before {
+    @include blik();
+    top: -120px;
+    left: 50%;
+    transform: translateX(calc(-50% + 84px));
+  }
+  &::after {
+    @include blik();
+    top: 300px;
+    left: 50%;
+    transform: translateX(calc(-50% - 30px));
+    @include media(desktop) {
+      top: 600px;
+      left: 0;
+    }
+  }
+  @include media(desktop) {
+    &::before {
+      display: none;
+    }
+  }
+}
 .htp-title.section-title {
   margin-bottom: 15px;
   @include media(desktop) {

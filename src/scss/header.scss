@@ -57,9 +57,13 @@ header .container {
     justify-content: center;
     gap: 16px;
   }
+  &:focus {
+    outline: 1px solid $_yellow_color;
+    outline-offset: 1px;
+  }
   &:hover &-thumb,
   &:focus &-thumb {
-    transform: scale(1.02);
+    transform: scale(1.01);
   }
   &:hover &-text,
   &:focus &-text {
@@ -124,6 +128,10 @@ header .container {
     &:focus {
       transform: scale(1.02);
       color: $_yellow_color;
+    }
+    &:focus {
+      outline: 1px solid $_yellow_color;
+      outline-offset: 1px;
     }
   }
 }
