@@ -1,12 +1,27 @@
+.gallery-swiper-container.container {
+  @include media(desktop) {
+    position: relative;
+  }
+}
+
+.gallery-swiper-box {
+  margin: 0 auto;
+  // background-color: $_main_color;
+  width: 288px;
+  @include media(desktop) {
+    width: 1076px;
+  }
+}
+
 .gallery-swiper {
   // background-color: $_brown_color;
+  width: 100%;
   overflow: hidden;
   border-radius: 16px;
   padding: 2px 2px 40px 2px;
   @include media(desktop) {
-    position: relative;
-    width: 1296px;
-    padding: 20px 110px 50px 110px;
+    width: 100%;
+    padding: 2px 0px 50px 0px;
   }
 }
 
@@ -45,17 +60,21 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 48px;
-    height: 48px;
+    width: 90px;
+    height: 90px;
     background-color: transparent;
+    outline: 1px solid $_yellow_color;
+    border-radius: 50%;
+    border: none;
+    z-index: 999;
     top: 50%;
     transform: translateY(-50%);
 
     &::after {
       content: '';
       display: block;
-      width: 100%;
-      height: 100%;
+      width: 48px;
+      height: 48px;
       background-size: contain;
       background-repeat: no-repeat;
       background-position: center;
@@ -64,7 +83,7 @@
 }
 
 .gallery-swiper .gallery-swiper-button-next {
-  right: 40px;
+  right: 0px;
 
   &::after {
     background-image: url(../img/reviews/fluent_arrow-next.png);
@@ -72,22 +91,42 @@
 }
 
 .gallery-swiper .gallery-swiper-button-prev {
-  left: 40px;
+  left: 1px;
 
   &::after {
     background-image: url(../img/reviews/fluent_arrow-prev.png);
   }
 }
-
-.gallery-swiper-pagination .swiper-pagination {
-  gap: 16px;
+.gallery-swiper-button-next.swiper-button-disabled,
+.gallery-swiper-button-prev.swiper-button-disabled {
+  opacity: 0.35;
+  cursor: auto;
+  pointer-events: none;
+  background-color: transparent;
 }
-.gallery-swiper-pagination .swiper-pagination-bullet {
-  width: 8px;
-  height: 8px;
-  line-height: 20px;
-  background: $_main_color;
-  opacity: 1;
+
+.gallery-swiper-button-next:hover,
+.gallery-swiper-button-next:active,
+.gallery-swiper-button-prev:hover,
+.gallery-swiper-button-prev:active {
+  background-color: $_button_hover_bg_color;
+}
+
+.gallery-swiper-pagination {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 16px;
+}
+.gallery-swiper-pagination {
+  .swiper-pagination-bullet {
+    width: 8px;
+    height: 8px;
+    // margin: 0 !important;
+    line-height: 20px;
+    background: $_main_color;
+    opacity: 1;
+  }
 }
 
 .gallery-swiper .swiper-pagination-bullet-active {
