@@ -68,7 +68,7 @@ screen types:
   width: 150px;
   height: 150px;
   border-radius: 50%;
-  background-color: $_blick_bg_color;
+  background-color: $_button_hover_bg_color;
   filter: blur(50px);
   z-index: -3;
   @include media(desktop) {
