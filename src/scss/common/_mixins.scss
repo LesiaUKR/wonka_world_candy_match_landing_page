@@ -58,3 +58,24 @@ screen types:
     text-shadow: -4px 4px 0px $_brown_shadow-color;
   }
 }
+
+@mixin blik($_mob_top, $_mob_left, $_desk_top, $_desk_left) {
+  position: absolute;
+  top: #{$_mob_top}px;
+  left: #{$_mob_left}px;
+  content: '';
+  display: block;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-color: $_blick_bg_color;
+  filter: blur(50px);
+  z-index: -3;
+  @include media(desktop) {
+    top: #{$_desk_top}px;
+    left: #{$_desk_left}px;
+    width: 500px;
+    height: 500px;
+    filter: blur(200px);
+  }
+}

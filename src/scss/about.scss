@@ -2,15 +2,58 @@
   text-align: center;
 }
 
+.about-section .container {
+  position: relative;
+  &::after {
+    @include blik(-80, 49, 50, 282);
+  }
+}
+
 .about-list-item {
+  position: relative;
   @include media(desktop) {
     display: flex;
     align-items: flex-start;
     justify-content: center;
     gap: 24px;
+    @include media(desktop) {
+      &::after {
+        display: none;
+      }
+    }
   }
   &:nth-child(even) {
     flex-direction: row-reverse;
+  }
+  &:nth-child(1) {
+    &::after {
+      @include blik(229, 186, 0, 0);
+    }
+    @include media(desktop) {
+      &::after {
+        display: none;
+      }
+    }
+  }
+  &:nth-child(2) {
+    &::after {
+      @include blik(268, -26, 0, 0);
+    }
+    @include media(desktop) {
+      &::after {
+        display: none;
+      }
+    }
+  }
+  &:nth-child(3) {
+    &::after {
+      @include blik(344, 159, 0, 0);
+    }
+    @include media(desktop) {
+      &::after {
+        display: none;
+      }
+    }
   }
 }
 

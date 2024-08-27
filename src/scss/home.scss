@@ -1,10 +1,13 @@
 .home-section.section {
+  position: relative;
   padding-top: 74px;
   text-align: center;
+
   @include media(desktop) {
     padding-top: 192px;
   }
 }
+
 .home-title-wrapper {
   max-width: 270px;
   margin: 0 auto 50px;
@@ -17,8 +20,9 @@
   }
 }
 .home-section-container.container {
-  @include media(desktop) {
-    position: relative;
+  position: relative;
+  &::after {
+    @include blik(112, 84, -20, 358);
   }
 }
 .section-title.home-subtitle {

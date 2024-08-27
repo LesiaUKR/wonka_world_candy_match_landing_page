@@ -4,6 +4,12 @@
     padding-bottom: 63px;
   }
 }
+.htp-section .container {
+  position: relative;
+  &::after {
+    @include blik(300, 53, -250, 673);
+  }
+}
 .htp-title.section-title {
   margin-bottom: 15px;
   @include media(desktop) {
