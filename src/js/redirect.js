@@ -1,4 +1,4 @@
-import { scrollToTop } from './helpers/scrollToTop.js';
+import { navigateTo } from './helpers/navigateTo.js';
 
 (() => {
   const location = document.location;
@@ -10,7 +10,7 @@ import { scrollToTop } from './helpers/scrollToTop.js';
   linkRefs.forEach(link =>
     link.addEventListener('click', e => {
       if (location.pathname.includes('index')) {
-        scrollToTop(e.target.hash);
+        navigateTo(e.target.hash);
         return;
       }
       const url = `${newHref}${link.hash}`;

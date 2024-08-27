@@ -1,5 +1,5 @@
 import * as bodyScrollLock from 'body-scroll-lock';
-export const scrollToTop = hash => {
+export const navigateTo = hash => {
   const headerRef = document.querySelector('header');
   if (!headerRef) return;
 
