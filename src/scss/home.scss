@@ -111,15 +111,17 @@
       content: '';
       width: 100%;
       height: 100%;
+      border-radius: 8px;
       background-color: transparent;
       filter: blur(0);
       z-index: -1;
       transition: background-color $animation-fast, filter $animation-fast;
     }
-    &:focus {
+    &:focus-visible {
       outline: 1px solid $_accent_color;
       outline-offset: 4px;
     }
+
     &:hover {
       &::after {
         filter: blur(20px);

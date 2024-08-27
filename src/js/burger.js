@@ -25,7 +25,7 @@ export const burgerMenu = () => {
   closeMenuBtns.forEach(closeMenuBtn => {
     closeMenuBtn.addEventListener('click', e => {
       toggleMenu();
-      navigateTo(e.target.hash);
+      // navigateTo(e.target.hash);
     });
   });
 
