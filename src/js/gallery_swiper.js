@@ -1,40 +1,37 @@
+document.documentElement.style.setProperty(
+  '--swiper-pagination-bullet-horizontal-gap',
+  '0px'
+);
+
 let gallerySwiper = new Swiper('.gallery-swiper', {
   pagination: {
     el: '.gallery-swiper-pagination',
   },
 
-  slidesPerView: 1, // Показувати один слайд
-  centeredSlides: true, // Центрувати активний слайд
+  slidesPerView: 1,
+  centeredSlides: true,
   spaceBetween: 16,
   simulateTouch: true,
-  // Чувствительность свайпа
   touchRatio: 1,
-  // Угол срабатывания свайпа/перетаскивания
   touchAngle: 45,
   grabCursor: true,
+  watchOverflow: true,
 
-  // Управление клавиатурой
   keyboard: {
-    // Включить\выключить
     enabled: true,
-    // Включить\выключить
-    // только когда слайдер
-    // в пределах вьюпорта
     onlyInViewport: true,
-    // Включить\выключить
-    // управление клавишами
-    // pageUp, pageDown
     pageUpDown: true,
   },
-
+  mousewheel: {
+    sensitivity: 1,
+  },
   breakpoints: {
     1440: {
       slidesPerView: 1,
       spaceBetween: 112,
-
       navigation: {
-        nextEl: '.gallery-swiper-button-prev',
-        prevEl: '.gallery-swiper-button-next',
+        nextEl: '.gallery-swiper-button-next',
+        prevEl: '.gallery-swiper-button-prev',
       },
     },
   },
