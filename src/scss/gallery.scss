@@ -1,3 +1,10 @@
+.gallery-sectin.section {
+  padding-bottom: 64px;
+  @include media(desktop) {
+    padding-bottom: 150px;
+  }
+}
+
 .gallery-swiper-container.container {
   @include media(desktop) {
     position: relative;
@@ -6,7 +13,6 @@
 
 .gallery-swiper-box {
   margin: 0 auto;
-  // background-color: $_main_color;
   width: 288px;
   @include media(desktop) {
     width: 1076px;
@@ -14,14 +20,11 @@
 }
 
 .gallery-swiper {
-  // background-color: $_brown_color;
   width: 100%;
   overflow: hidden;
   border-radius: 16px;
-  padding: 2px 2px 40px 2px;
   @include media(desktop) {
     width: 100%;
-    padding: 2px 0px 50px 0px;
   }
 }
 
@@ -46,7 +49,7 @@
 .image-slider__image img {
   width: 100%;
   border-radius: 16px;
-  content: fit;
+  object-fit: cover;
   @include media(desktop) {
     max-width: 1076px;
   }
@@ -66,7 +69,6 @@
     outline: 1px solid $_yellow_color;
     border-radius: 50%;
     border: none;
-    z-index: 999;
     top: 50%;
     transform: translateY(-50%);
 
@@ -83,7 +85,7 @@
 }
 
 .gallery-swiper .gallery-swiper-button-next {
-  right: 0px;
+  right: 72px;
 
   &::after {
     background-image: url(../img/reviews/fluent_arrow-next.png);
@@ -91,7 +93,7 @@
 }
 
 .gallery-swiper .gallery-swiper-button-prev {
-  left: 1px;
+  left: 72px;
 
   &::after {
     background-image: url(../img/reviews/fluent_arrow-prev.png);
@@ -117,6 +119,10 @@
   justify-content: center;
   gap: 16px;
   margin-top: 16px;
+  @include media(desktop) {
+    gap: 28px;
+    margin-top: 36px;
+  }
 }
 .gallery-swiper-pagination {
   .swiper-pagination-bullet {
@@ -131,4 +137,14 @@
 
 .gallery-swiper .swiper-pagination-bullet-active {
   background-color: $_brown_color;
+}
+
+.home-button.home-button--gallery {
+  margin-top: 56px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0px;
+  @include media(desktop) {
+    margin-top: 60px;
+  }
 }
