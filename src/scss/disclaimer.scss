@@ -1,0 +1,28 @@
+.disclaimer-section {
+  position: relative;
+  &::after {
+    @include blik();
+    bottom: -75px;
+    left: 50%;
+    transform: translateX(calc(-50% - 23px));
+  }
+  @include media(desktop) {
+    &::after {
+      display: none;
+    }
+  }
+}
+
+.section-title.disclaimer-subtitle {
+  @include media(desktop) {
+    margin-bottom: 43px;
+  }
+}
+
+.disclaimer-description {
+  text-transform: uppercase;
+  @include media(desktop) {
+    @include font(30, 37);
+    letter-spacing: 0.2px;
+  }
+}

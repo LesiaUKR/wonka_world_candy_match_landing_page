@@ -59,10 +59,8 @@ screen types:
   }
 }
 
-@mixin blik($_mob_top, $_mob_left, $_desk_top, $_desk_left) {
+@mixin blik() {
   position: absolute;
-  top: #{$_mob_top}px;
-  left: #{$_mob_left}px;
   content: '';
   display: block;
   width: 150px;
@@ -72,8 +70,6 @@ screen types:
   filter: blur(50px);
   z-index: -3;
   @include media(desktop) {
-    top: #{$_desk_top}px;
-    left: #{$_desk_left}px;
     width: 500px;
     height: 500px;
     filter: blur(200px);
