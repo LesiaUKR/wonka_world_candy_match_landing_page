@@ -1,4 +1,4 @@
-import './js/navigation.js';
+// import './js/navigation.js';
 import './js/burger.js';
 import './js/load.js';
 // import './js/swiper.js';

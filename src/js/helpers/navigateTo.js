@@ -12,6 +12,7 @@ export const navigateTo = hash => {
     window.scrollBy({
       top: positionToScroll,
       behavior: 'smooth',
-    })
+    }),
+    100
   );
 };

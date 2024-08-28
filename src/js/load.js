@@ -5,7 +5,7 @@ import { navigateTo } from './helpers/navigateTo.js';
   if (!locationHash) return;
 
   window.addEventListener('load', e => {
-    e.preventDefault();
+    // e.preventDefault();
     navigateTo(locationHash);
   });
 })();
