@@ -1,3 +1,40 @@
+.benefits-container {
+  position: relative;
+  &::before {
+    @include blik();
+    top: -40px;
+    left: 50%;
+    transform: translateX(calc(-50% - 70px));
+  }
+  @include media(desktop) {
+    &::before {
+      display: none;
+    }
+  }
+}
+
+.benefits-thumb {
+  position: relative;
+  &::before {
+    @include blik();
+    top: 300px;
+    left: 50%;
+    transform: translateX(calc(-50% + 110px));
+  }
+  &::after {
+    @include blik();
+    top: 580px;
+    left: 50%;
+    transform: translateX(calc(-50% - 160px));
+  }
+  @include media(desktop) {
+    &::before,
+    &::after {
+      display: none;
+    }
+  }
+}
+
 .benefits-list {
   display: flex;
   justify-content: center;

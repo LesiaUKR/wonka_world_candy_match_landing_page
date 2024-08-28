@@ -6,8 +6,28 @@
 }
 
 .gallery-swiper-container.container {
+  position: relative;
+  &::before {
+    @include blik();
+    top: -76px;
+    left: 50%;
+    transform: translateX(calc(-50% - 100px));
+  }
+  &::after {
+    @include blik();
+    top: 200px;
+    left: 50%;
+    transform: translateX(calc(-50% + 26px));
+    @include media(desktop) {
+      top: 470px;
+      left: 50%;
+      transform: translateX(calc(-50% - 450px));
+    }
+  }
   @include media(desktop) {
-    position: relative;
+    &::before {
+      display: none;
+    }
   }
 }
 
