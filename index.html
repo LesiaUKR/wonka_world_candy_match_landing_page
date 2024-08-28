@@ -2,8 +2,12 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/wonka_world_candy_match_landing_page/favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Welcome to Wonka's World of Candy Match 3 - an exciting and colorful puzzle game filled with sweet adventures! Join the fun and match candies to win!"
+    />
+    <link rel="icon" type="image/png" sizes="32x32" href="/wonka_world_candy_match_landing_page/favicon.png" />
     <title>Wonka's World of Candy Match 3</title>
     <link
       rel="stylesheet"
@@ -18,8 +22,8 @@
     
     <script type="module" crossorigin src="/wonka_world_candy_match_landing_page/commonHelpers.js"></script>
     <link rel="modulepreload" crossorigin href="/wonka_world_candy_match_landing_page/assets/vendor-af36df9a.js">
-    <link rel="modulepreload" crossorigin href="/wonka_world_candy_match_landing_page/assets/main-f39168d0.js">
-    <link rel="stylesheet" href="/wonka_world_candy_match_landing_page/assets/main-220ab436.css">
+    <link rel="modulepreload" crossorigin href="/wonka_world_candy_match_landing_page/assets/main-58fc6e2f.js">
+    <link rel="stylesheet" href="/wonka_world_candy_match_landing_page/assets/main-3b6e9f49.css">
   </head>
   <body>
     <header>
@@ -745,67 +749,70 @@
 </section>
 
       <section class="section" id="reviews">
-  <div class="review-container container">
+  <div class="reviews-container container">
     <h2 class="section-title" text="Reviews">Reviews</h2>
-    <div class="swiper swiper-wrap">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide">
-          <div class="review-item">
+    <div class="reviews-swiper-box">
+      <!-- Slider main container -->
+      <div class="reviews-swiper">
+        <!-- Additional required wrapper -->
+        <ul class="swiper-wrapper">
+          <!-- Slides -->
+          <li class="review-item__slide swiper-slide">
             <p class="review-text">
               Absolutely addictive! Love the colorful levels and the fun
               storyline. It’s more than just matching!
             </p>
             <p class="review-user">CandyCrusher101</p>
-          </div>
-        </div>
-        <div class="swiper-slide">
-          <div class="review-item">
+          </li>
+          <li class="review-item__slide swiper-slide">
             <p class="review-text">
               A sweet twist on match-3 games. Decorating the factory is my
               favorite part.
             </p>
             <p class="review-user">ChocoFanatic56</p>
-          </div>
-        </div>
-        <div class="swiper-slide">
-          <div class="review-item">
+          </li>
+          <li class="review-item__slide swiper-slide">
             <p class="review-text">
               Great for all ages! My kids and I enjoy playing and seeing what’s
               next in the factory.
             </p>
             <p class="review-user">FamilyGamer88</p>
-          </div>
-        </div>
-        <div class="swiper-slide">
-          <div class="review-item">
+          </li>
+          <li class="review-item__slide swiper-slide">
             <p class="review-text">
               The graphics are fantastic, and the puzzles are challenging but
               fair. Keeps me coming back!
             </p>
             <p class="review-user">PuzzleMaster99</p>
-          </div>
-        </div>
-        <div class="swiper-slide">
-          <div class="review-item">
+          </li>
+          <li class="review-item__slide swiper-slide">
             <p class="review-text">
               I really feel like I’m part of the Willy Wonka story. So many
               creative levels!
             </p>
             <p class="review-user">BookLover415</p>
-          </div>
-        </div>
-        <div class="swiper-slide">
-          <div class="review-item">
+          </li>
+          <li class="review-item__slide swiper-slide">
             <p class="review-text">
               Engaging and beautifully designed. The events are super fun too!
             </p>
             <p class="review-user">SweetToothSam</p>
-          </div>
-        </div>
+          </li>
+        </ul>
+        <!-- Navigation buttons -->
+        <button
+          class="reviews-swiper-button-next"
+          type="button"
+          aria-label="navigation to right"
+        ></button>
+        <button
+          class="reviews-swiper-button-prev"
+          type="button"
+          aria-label="navigation to left"
+        ></button>
+        <!-- Pagination -->
+        <div class="reviews-swiper-pagination"></div>
       </div>
-      <div class="reviews-swiper-pagination"></div>
-      <div class="swiper-button-prev"></div>
-      <div class="swiper-button-next"></div>
     </div>
   </div>
 </section>
@@ -816,14 +823,6 @@
     <ul class="benefits-list">
       <li class="benefits-item">
         <div class="benefits-wrapper">
-          <!-- <img
-            class="benefits-star"
-            src="./img/benefits/star.png"
-            alt="benefits star"
-            loading="lazy"
-            width="122"
-            height="113"
-          /> -->
           <svg class="benefits-star" width="122" height="113">
             <use href="/wonka_world_candy_match_landing_page/assets/sprite-e34ca35d.svg#icon-star"></use>
           </svg>
@@ -1054,8 +1053,7 @@
             </div>
           </li>
         </ul>
-
-        <!-- If we need navigation buttons -->
+        <!-- Navigation buttons -->
         <button
           class="gallery-swiper-button-next"
           type="button"
@@ -1064,10 +1062,9 @@
         <button
           class="gallery-swiper-button-prev"
           type="button"
-          aria-label="navigation to right"
+          aria-label="navigation to left"
         ></button>
-
-        <!-- If we need pagination -->
+        <!-- Pagination -->
         <div class="gallery-swiper-pagination"></div>
       </div>
     </div>
@@ -1129,6 +1126,7 @@
 
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
     
     
     
