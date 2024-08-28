@@ -2,9 +2,20 @@
   position: relative;
   &::before {
     @include blik();
+    top: 800px;
+    left: 50%;
+    transform: translateX(calc(-50% + 70px));
+  }
+  &::after {
+    @include blik();
     top: -40px;
     left: 50%;
     transform: translateX(calc(-50% - 70px));
+    @include media(desktop) {
+      top: 0px;
+      left: 50%;
+      transform: translateX(calc(-50% + 350px));
+    }
   }
   @include media(desktop) {
     &::before {
