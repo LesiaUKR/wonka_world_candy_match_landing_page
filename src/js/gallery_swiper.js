@@ -22,9 +22,6 @@ let gallerySwiper = new Swiper('.gallery-swiper', {
     onlyInViewport: true,
     pageUpDown: true,
   },
-  // mousewheel: {
-  //   sensitivity: 1,
-  // },
   breakpoints: {
     1440: {
       slidesPerView: 1,
