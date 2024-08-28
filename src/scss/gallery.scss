@@ -95,7 +95,7 @@
     border: none;
     top: 50%;
     transform: translateY(-50%);
-
+    transition: background-color $animation-reveal;
     &::after {
       content: '';
       display: block;
