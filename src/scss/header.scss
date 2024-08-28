@@ -72,6 +72,9 @@ header .container {
 }
 
 .nav-logo-thumb {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 60px;
   height: 60px;
   border-radius: 8px;
@@ -132,6 +135,9 @@ header .container {
     &:focus {
       outline: 1px solid $_yellow_color;
       outline-offset: 1px;
+    }
+    &:focus:active {
+      outline: none;
     }
   }
 }

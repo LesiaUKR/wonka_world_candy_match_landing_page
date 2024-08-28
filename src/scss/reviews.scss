@@ -1,3 +1,19 @@
+.reviews-container {
+  position: relative;
+  &::before {
+    @include blik();
+    top: -65px;
+    left: 50%;
+    transform: translateX(calc(-50% + 80px));
+  }
+
+  @include media(desktop) {
+    &::before {
+      display: none;
+    }
+  }
+}
+
 .reviews-swiper-box {
   margin: 0 auto;
   width: 288px;
