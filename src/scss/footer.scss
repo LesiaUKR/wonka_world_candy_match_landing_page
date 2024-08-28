@@ -25,7 +25,7 @@
   }
 }
 
-.nav-link {
+.footer-nav .nav-link {
   @include font(16, 24);
   font-family: $font-family;
   color: $_main_color;
@@ -40,6 +40,14 @@
   &:hover,
   &:focus {
     color: $_accent_color;
+  }
+
+  &:focus {
+    outline: 1px solid $_yellow_color;
+    outline-offset: 1px;
+  }
+  &:focus:active {
+    outline: none;
   }
 
   @include media(desktop) {

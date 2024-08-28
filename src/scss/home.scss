@@ -1,17 +1,18 @@
 .home-section.section {
   position: relative;
-  padding-top: 95px;
+  padding-top: 100px;
   text-align: center;
 
   &::after {
     @include blik();
-    top: 155px;
+    top: 200px;
     left: 50%;
     transform: translateX(-50%);
   }
 
   @include media(desktop) {
-    padding-top: 192px;
+    padding: 213px 0 88px;
+
     &::after {
       top: 100px;
       transform: translateX(calc(-50% - 92px));
@@ -23,13 +24,14 @@
 }
 
 .home-title-wrapper {
-  max-width: 270px;
-  margin: 0 auto 50px;
+  min-height: 104px;
+  max-width: 282px;
+  margin: 0 auto 55px;
   @include media(desktop) {
     margin: 0 0 72px;
     padding-top: 52px;
     max-height: 288px;
-    max-width: 662px;
+    max-width: 660px;
     overflow: hidden;
   }
 }
