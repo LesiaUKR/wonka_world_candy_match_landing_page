@@ -29,8 +29,8 @@
     
     <script type="module" crossorigin src="/wonka_world_candy_match_landing_page/commonHelpers.js"></script>
     <link rel="modulepreload" crossorigin href="/wonka_world_candy_match_landing_page/assets/vendor-af36df9a.js">
-    <link rel="modulepreload" crossorigin href="/wonka_world_candy_match_landing_page/assets/main-6f520464.js">
-    <link rel="stylesheet" href="/wonka_world_candy_match_landing_page/assets/main-3a105460.css">
+    <link rel="modulepreload" crossorigin href="/wonka_world_candy_match_landing_page/assets/main-5369b0f3.js">
+    <link rel="stylesheet" href="/wonka_world_candy_match_landing_page/assets/main-0497171b.css">
   </head>
   <body>
     <header>
@@ -304,7 +304,9 @@
       <section class="disclaimer-section section">
   <div class="container">
     <!--  DISCLAIMER TITLE-->
-    <h2 class="section-title disclaimer-title" text="Disclaimer">Disclaimer</h2>
+    <h2 class="section-title disclaimer-title" data-text="Disclaimer">
+      Disclaimer
+    </h2>
     <!--  DISCLAIMER DESCRIPTION-->
     <p class="disclaimer-description">
       starluckyventures.com is a platform for having fun. The probability of
@@ -319,7 +321,7 @@
 <section class="about-section section" id="about">
   <div class="container">
     <!-- ABOUT TITLE -->
-    <h2 class="section-title" text="About the game">About the game</h2>
+    <h2 class="section-title" data-text="About the game">About the game</h2>
     <!-- ABOUT LIST -->
     <ul class="about-list">
       <!-- ABOUT LIST ITEM 1-->
@@ -353,7 +355,6 @@
               media="(min-width: 320px)"
             />
             <img
-              
               src="/wonka_world_candy_match_landing_page/assets/about-img1-mobile@1x-2266c1b0.jpg"
               alt="wonka start page"
               loading="lazy"
@@ -361,7 +362,7 @@
           </picture>
         </div>
       </li>
-       <!-- ABOUT LIST ITEM 2-->
+      <!-- ABOUT LIST ITEM 2-->
       <li class="about-list-item">
         <p class="about-item-description">
           Each level offers unique candy and confectionery challenges with
@@ -394,7 +395,6 @@
               media="(min-width: 320px)"
             />
             <img
-              
               src="/wonka_world_candy_match_landing_page/assets/about-img2-mobile@1x-accb1b7f.jpg"
               alt="wonka puzzle game"
               loading="lazy"
@@ -402,7 +402,7 @@
           </picture>
         </div>
       </li>
-       <!-- ABOUT LIST ITEM 3-->
+      <!-- ABOUT LIST ITEM 3-->
       <li class="about-list-item">
         <p class="about-item-description">
           Immerse yourself in the enchanting world of Willy Wonka in "Wonka's
@@ -435,7 +435,6 @@
               media="(min-width: 320px)"
             />
             <img
-              
               src="/wonka_world_candy_match_landing_page/assets/about-img3-mobile@1x-987f6a89.jpg"
               alt="wonka gamer path"
               loading="lazy"
@@ -451,7 +450,7 @@
 <section class="htp-section section" id="how-to-play">
   <div class="container">
     <!-- How-to-Play TITLE -->
-    <h2 class="htp-title section-title" text="How to Play">How to Play</h2>
+    <h2 class="htp-title section-title" data-text="How to Play">How to Play</h2>
     <!-- How-to-Play ARROW -->
     <button class="htp-button js-htp-button" type="button" title="arrow">
       <svg class="htp-icon" width="24" height="24">
@@ -827,41 +826,42 @@
       <ul class="benefits-list">
         <li class="benefits-item">
           <div class="benefits-wrapper">
-          <img
-            src="/wonka_world_candy_match_landing_page/assets/benefits-star-pic@2x-e68ede2f.png"
-            alt="benefits-star"
-            loading="lazy"
-            width="122"
-            height="113"
-          />
-        </div>
-        <span class="benefits-description">4,8</span>
-      </li>
-      <li class="benefits-item">
-        <div class="benefits-wrapper">
-          <span class="benefits-text" data-text="50000">50000</span>
-        </div>
-        <span class="benefits-description">Downloads</span>
-      </li>
-      <li class="benefits-item">
-        <div class="benefits-wrapper">
-          <span class="benefits-text" data-text="1000+">1000+</span>
-        </div>
-        <span class="benefits-description">Reviews</span>
-      </li>
-      <li class="benefits-item">
-        <div class="benefits-wrapper wi-fi">
-          <svg class="benefits-icon wi-fi" width="56" height="56">
-            <use href="/wonka_world_candy_match_landing_page/assets/sprite-e34ca35d.svg#icon-wifi"></use>
-          </svg>
-          <span class="benefits-text" data-text="or">or</span>
-          <svg class="benefits-icon wi-fi" width="56" height="56">
-            <use href="/wonka_world_candy_match_landing_page/assets/sprite-e34ca35d.svg#icon-no-wifi"></use>
-          </svg>
-        </div>
-        <span class="benefits-description">Online/Offline</span>
-      </li>
-    </ul>
+            <img
+              src="/wonka_world_candy_match_landing_page/assets/benefits-star-pic@2x-e68ede2f.png"
+              alt="benefits-star"
+              loading="lazy"
+              width="122"
+              height="113"
+            />
+          </div>
+          <span class="benefits-description">4,8</span>
+        </li>
+        <li class="benefits-item">
+          <div class="benefits-wrapper">
+            <span class="benefits-text" data-text="50000">50000</span>
+          </div>
+          <span class="benefits-description">Downloads</span>
+        </li>
+        <li class="benefits-item">
+          <div class="benefits-wrapper">
+            <span class="benefits-text" data-text="1000+">1000+</span>
+          </div>
+          <span class="benefits-description">Reviews</span>
+        </li>
+        <li class="benefits-item">
+          <div class="benefits-wrapper wi-fi">
+            <svg class="benefits-icon wi-fi" width="56" height="56">
+              <use href="/wonka_world_candy_match_landing_page/assets/sprite-e34ca35d.svg#icon-wifi"></use>
+            </svg>
+            <span class="benefits-text" data-text="or">or</span>
+            <svg class="benefits-icon wi-fi" width="56" height="56">
+              <use href="/wonka_world_candy_match_landing_page/assets/sprite-e34ca35d.svg#icon-no-wifi"></use>
+            </svg>
+          </div>
+          <span class="benefits-description">Online/Offline</span>
+        </li>
+      </ul>
+    </div>
   </div>
 </section>
 
