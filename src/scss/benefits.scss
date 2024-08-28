@@ -1,0 +1,75 @@
+.benefits-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 36px;
+}
+
+.benefits-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.benefits-wrapper {
+  z-index: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 196px;
+  height: 196px;
+  gap: 20px;
+  background-color: $_pic_bg_color;
+  border-radius: 50%;
+  border: 4px solid $_yellow_color;
+}
+.benefits-star {
+  width: 122px;
+  height: 113px;
+}
+
+.benefits-description {
+  color: $_yellow_color;
+  text-align: center;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: $_brown_color;
+  font-family: $second_font_family;
+  @include font(24, 24);
+  font-style: normal;
+  font-weight: $regular;
+  line-height: normal;
+}
+
+.benefits-text {
+  position: relative;
+  @include font(40, 40);
+  font-weight: $medium;
+  background: $_orange_gradient;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: normal;
+
+  &::before {
+    content: attr(data-text);
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    text-shadow: -4px 4px 0 $_brown_shadow-color;
+  }
+}
+
+.benefits-wrapper.wi-fi {
+  display: flex;
+  flex-direction: row;
+  row-gap: 12px;
+  padding: 70px 12px;
+}
+
+.benefits-icon.wi-fi {
+  fill: $_yellow_color;
+}
