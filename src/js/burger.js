@@ -24,8 +24,14 @@ export const burgerMenu = () => {
 
   closeMenuBtns.forEach(closeMenuBtn => {
     closeMenuBtn.addEventListener('click', e => {
+      // e.preventDefault();
+
+      if (e.currentTarget.nodeName === 'A') {
+        toggleMenu();
+        navigateTo(e.target.hash);
+        return;
+      }
       toggleMenu();
-      // navigateTo(e.target.hash);
     });
   });
 
@@ -49,3 +55,5 @@ export const burgerMenu = () => {
     }, 100)
   );
 };
+
+burgerMenu();
