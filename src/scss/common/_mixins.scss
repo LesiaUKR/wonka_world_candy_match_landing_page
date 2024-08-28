@@ -58,3 +58,20 @@ screen types:
     text-shadow: -4px 4px 0px $_brown_shadow-color;
   }
 }
+
+@mixin blik() {
+  position: absolute;
+  content: '';
+  display: block;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-color: $_button_hover_bg_color;
+  filter: blur(50px);
+  z-index: -3;
+  @include media(desktop) {
+    width: 500px;
+    height: 500px;
+    filter: blur(200px);
+  }
+}
