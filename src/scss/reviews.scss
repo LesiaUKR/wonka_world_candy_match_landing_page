@@ -1,26 +1,23 @@
-.review-container.container {
-  padding-left: 0;
-  padding-right: 0;
+.reviews-swiper-box {
+  margin: 0 auto;
+  width: 288px;
+  padding: 7px 1px 1px 1px;
 
+  overflow: hidden;
   @include media(desktop) {
-    padding-left: 72px;
-    padding-right: 72px;
+    padding-top: 78px;
+    width: 1296px;
   }
 }
 
-.swiper-wrap.swiper {
+.reviews-swiper {
   width: 100%;
-  height: 230px;
-  padding: 10px 0 24px 16px;
-
   @include media(desktop) {
     position: relative;
-    padding: 64px 2px 2px 2px;
-    height: 100%;
   }
 }
 
-.review-item {
+.review-item__slide {
   position: relative;
   display: flex;
   justify-content: center;
@@ -28,7 +25,7 @@
   align-items: center;
   gap: 36px;
 
-  width: 282px;
+  width: 100%;
   height: 180px;
   border-radius: 16px;
   outline: 1px solid $_yellow_color;
@@ -64,7 +61,6 @@
 
 .review-user {
   color: #f8f9f3;
-
   font-family: $font_family;
   @include font(20, 24);
   font-style: normal;
@@ -75,26 +71,32 @@
 }
 
 .reviews-swiper-pagination {
+  display: flex;
+  justify-content: center;
   gap: 16px;
-  display: block;
+  margin-top: 11px;
+
   @include media(desktop) {
     display: none;
   }
 }
-.reviews-swiper-pagination .swiper-pagination-bullet {
-  width: 8px;
-  height: 8px;
-  line-height: 20px;
-  background: $_main_color;
-  opacity: 1;
+
+.reviews-swiper-pagination {
+  .swiper-pagination-bullet {
+    width: 8px;
+    height: 8px;
+    line-height: 20px;
+    background: $_main_color;
+    opacity: 1;
+  }
 }
 
-.swiper .swiper-pagination-bullet-active {
+.reviews-swiper .swiper-pagination-bullet-active {
   background-color: $_brown_color;
 }
 
-.swiper .swiper-button-next,
-.swiper .swiper-button-prev {
+.reviews-swiper .reviews-swiper-button-next,
+.reviews-swiper .reviews-swiper-button-prev {
   display: none;
   @include media(desktop) {
     position: absolute;
@@ -105,7 +107,8 @@
     height: 48px;
     background-color: transparent;
     right: 10px;
-    top: 28px;
+    top: -78px;
+    z-index: 1;
 
     &::after {
       content: '';
@@ -119,7 +122,7 @@
   }
 }
 
-.swiper .swiper-button-next {
+.reviews-swiper .reviews-swiper-button-next {
   right: 10px;
 
   &::after {
@@ -127,10 +130,18 @@
   }
 }
 
-.swiper .swiper-button-prev {
+.reviews-swiper .reviews-swiper-button-prev {
   left: 10px;
 
   &::after {
     background-image: url(../img/reviews/fluent_arrow-prev.png);
   }
+}
+
+.reviews-swiper-button-next.swiper-button-disabled,
+.reviews-swiper-button-prev.swiper-button-disabled {
+  opacity: 0.35;
+  cursor: auto;
+  pointer-events: none;
+  background-color: transparent;
 }

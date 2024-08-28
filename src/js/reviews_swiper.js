@@ -1,4 +1,9 @@
-let swiper = new Swiper('.swiper', {
+document.documentElement.style.setProperty(
+  '--swiper-pagination-bullet-horizontal-gap',
+  '0px'
+);
+
+let reviewsSwiper = new Swiper('.reviews-swiper', {
   pagination: {
     el: '.reviews-swiper-pagination',
   },
@@ -9,21 +14,18 @@ let swiper = new Swiper('.swiper', {
     onlyInViewport: true,
     pageUpDown: true,
   },
-  mousewheel: {
-    sensitivity: 1,
-  },
   slidesPerView: 1,
   watchOverflow: true,
-  spaceBetween: 16,
+  spaceBetween: 15,
   slidesPerGroup: 1,
-
+  autoheight: true,
   breakpoints: {
     1440: {
       slidesPerView: 4,
       spaceBetween: 56,
       navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
+        nextEl: '.reviews-swiper-button-next',
+        prevEl: '.reviews-swiper-button-prev',
       },
     },
   },
