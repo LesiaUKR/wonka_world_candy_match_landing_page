@@ -1,6 +1,5 @@
 import * as bodyScrollLock from 'body-scroll-lock';
 import debounce from 'lodash.debounce';
-import { navigateTo } from './helpers/navigateTo.js';
 
 export const burgerMenu = () => {
   const mobileMenu = document.querySelector('.js-menu-container');
@@ -24,13 +23,6 @@ export const burgerMenu = () => {
 
   closeMenuBtns.forEach(closeMenuBtn => {
     closeMenuBtn.addEventListener('click', e => {
-      // e.preventDefault();
-
-      if (e.currentTarget.nodeName === 'A') {
-        toggleMenu();
-        navigateTo(e.target.hash);
-        return;
-      }
       toggleMenu();
     });
   });
