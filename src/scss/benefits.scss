@@ -4,6 +4,11 @@
   align-items: center;
   flex-direction: column;
   gap: 36px;
+
+  @include media(desktop) {
+    flex-direction: row;
+    gap: 170px;
+  }
 }
 
 .benefits-item {
@@ -12,6 +17,9 @@
   justify-content: center;
   align-items: center;
   gap: 20px;
+  @include media(desktop) {
+    gap: 36px;
+  }
 }
 
 .benefits-wrapper {
@@ -21,11 +29,17 @@
   align-items: center;
   width: 196px;
   height: 196px;
-  gap: 20px;
+
   background-color: $_pic_bg_color;
   border-radius: 50%;
   border: 4px solid $_yellow_color;
 }
+
+.benefits-wrapper.wi-fi {
+  flex-direction: row;
+  gap: 12px;
+}
+
 .benefits-star {
   width: 122px;
   height: 113px;
@@ -61,13 +75,6 @@
     z-index: -1;
     text-shadow: -4px 4px 0 $_brown_shadow-color;
   }
-}
-
-.benefits-wrapper.wi-fi {
-  display: flex;
-  flex-direction: row;
-  row-gap: 12px;
-  padding: 70px 12px;
 }
 
 .benefits-icon.wi-fi {
