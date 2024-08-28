@@ -115,6 +115,7 @@
   background-color: $_pic_bg_color;
   border: 1px solid $_yellow_color;
   border-radius: 50%;
+  overflow: hidden;
   @include media(desktop) {
     margin-bottom: 36px;
     height: 196px;

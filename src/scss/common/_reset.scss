@@ -2,13 +2,17 @@
 
 html {
   box-sizing: border-box;
+  scroll-behavior: smooth;
+  scroll-padding-top: 76px;
+  @include media(desktop) {
+    scroll-padding-top: 126px;
+  }
 }
 
 *,
 *::before,
 *::after {
   box-sizing: inherit;
-  // outline: 1px solid red;
 }
 
 body {
