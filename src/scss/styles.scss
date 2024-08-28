@@ -54,11 +54,11 @@
 }
 
 .section-title {
-  @include title(24, 33, 0.96, attr(text));
+  @include title(24, 33, 0.96, attr(data-text));
   display: inline-block;
   margin-bottom: 36px;
   @include media(desktop) {
-    @include title(48, 66, 1.92, attr(text));
+    @include title(48, 66, 1.92, attr(data-text));
     margin-bottom: 56px;
   }
 }
