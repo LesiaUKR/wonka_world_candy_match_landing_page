@@ -18,8 +18,8 @@
     
     <script type="module" crossorigin src="/wonka_world_candy_match_landing_page/commonHelpers.js"></script>
     <link rel="modulepreload" crossorigin href="/wonka_world_candy_match_landing_page/assets/vendor-af36df9a.js">
-    <link rel="modulepreload" crossorigin href="/wonka_world_candy_match_landing_page/assets/main-8699c1fe.js">
-    <link rel="stylesheet" href="/wonka_world_candy_match_landing_page/assets/main-5f389ff5.css">
+    <link rel="modulepreload" crossorigin href="/wonka_world_candy_match_landing_page/assets/main-adbe4095.js">
+    <link rel="stylesheet" href="/wonka_world_candy_match_landing_page/assets/main-0dfe46c2.css">
   </head>
   <body>
     <header>
@@ -776,7 +776,50 @@
   </div>
 </section>
 
-      
+      <section class="section">
+  <div>
+    <h2 class="section-title" text="Benefits">Benefits</h2>
+    <ul class="benefits-list">
+      <li class="benefits-item">
+        <div class="benefits-wrapper">
+          <img
+            class="benefits-star"
+            src="/wonka_world_candy_match_landing_page/assets/star-f1fd26a9.png"
+            alt="benefits star"
+            loading="lazy"
+            width="122"
+            height="113"
+          />
+        </div>
+        <span class="benefits-description">4,8</span>
+      </li>
+      <li class="benefits-item">
+        <div class="benefits-wrapper">
+          <span class="benefits-text" data-text="50000">50000</span>
+        </div>
+        <span class="benefits-description">Downloads</span>
+      </li>
+      <li class="benefits-item">
+        <div class="benefits-wrapper">
+          <span class="benefits-text" data-text="1000+">1000+</span>
+        </div>
+        <span class="benefits-description">Reviews</span>
+      </li>
+      <li class="benefits-item">
+        <div class="benefits-wrapper wi-fi">
+          <svg class="benefits-icon wi-fi" width="56" height="56">
+            <use href="/wonka_world_candy_match_landing_page/assets/sprite-e34ca35d.svg#icon-wifi"></use>
+          </svg>
+          <span class="benefits-text" data-text="or">or</span>
+          <svg class="benefits-icon wi-fi" width="56" height="56">
+            <use href="/wonka_world_candy_match_landing_page/assets/sprite-e34ca35d.svg#icon-no-wifi"></use>
+          </svg>
+        </div>
+        <span class="benefits-description">Online/Offline</span>
+      </li>
+    </ul>
+  </div>
+</section>
 
       <section class="gallery-sectin section" id="gallery">
   <div class="gallery-swiper-container container">
@@ -998,11 +1041,28 @@
       rel="noopener noreferrer"
       title="mobile game wonka"
     >
-      <svg class="home-button-icon">
-        <use href="/wonka_world_candy_match_landing_page/assets/sprite-e34ca35d.svg#icon-google-play"></use>
-      </svg>
+      <picture>
+        <source
+          srcset="/wonka_world_candy_match_landing_page/assets/hero-google-pic@1x-5dcad4e2.webp 1x, /wonka_world_candy_match_landing_page/assets/hero-google-pic@2x-121ceb23.webp 2x"
+          media="(min-width: 320px)"
+          type="image/webp"
+        />
+        <source
+          srcset="/wonka_world_candy_match_landing_page/assets/hero-google-pic@1x-2746f31a.png 1x, /wonka_world_candy_match_landing_page/assets/hero-google-pic@2x-84c26f14.png 2x"
+          media="(min-width: 320px)"
+        />
 
-      <span>Get it on<span class="home-button-text">Google Play</span></span></a
+        <img
+          class="home-google-icon"
+          src="/wonka_world_candy_match_landing_page/assets/hero-google-pic@1x-2746f31a.png"
+          alt="google play icon"
+          loading="lazy"
+        />
+      </picture>
+
+      <span
+        >Get it on <span class="home-button-text">Google Play</span></span
+      ></a
     >
   </div>
 </section>
