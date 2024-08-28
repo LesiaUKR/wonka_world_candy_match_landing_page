@@ -133,6 +133,9 @@ header .container {
       outline: 1px solid $_yellow_color;
       outline-offset: 1px;
     }
+    &:focus:active {
+      outline: none;
+    }
   }
 }
 
