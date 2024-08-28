@@ -290,11 +290,34 @@
       rel="noopener noreferrer"
       title="mobile game wonka"
     >
-      <svg class="home-button-icon">
-        <use href="./img/sprite.svg#icon-google-play"></use>
-      </svg>
+      <picture>
+        <source
+          srcset="
+            ./img/hero/hero-google-pic@1x.webp 1x,
+            ./img/hero/hero-google-pic@2x.webp 2x
+          "
+          media="(min-width: 320px)"
+          type="image/webp"
+        />
+        <source
+          srcset="
+            ./img/hero/hero-google-pic@1x.png 1x,
+            ./img/hero/hero-google-pic@2x.png 2x
+          "
+          media="(min-width: 320px)"
+        />
 
-      <span>Get it on<span class="home-button-text">Google Play</span></span></a
+        <img
+          class="home-google-icon"
+          src="./img/hero/hero-google-pic@1x.png"
+          alt="google play icon"
+          loading="lazy"
+        />
+      </picture>
+
+      <span
+        >Get it on <span class="home-button-text">Google Play</span></span
+      ></a
     >
   </div>
 </section>
