@@ -7,7 +7,10 @@ let gallerySwiper = new Swiper('.gallery-swiper', {
   pagination: {
     el: '.gallery-swiper-pagination',
   },
-
+  effect: 'fade',
+  fadeEffect: {
+    crossFade: true,
+  },
   slidesPerView: 1,
   centeredSlides: true,
   spaceBetween: 16,

@@ -65,8 +65,11 @@
   justify-content: center;
   align-items: center;
   gap: 20px;
+
   @include media(desktop) {
     gap: 36px;
+    animation-duration: 2s;
+    animation-fill-mode: both;
   }
 }
 
