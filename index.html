@@ -29,8 +29,8 @@
     
     <script type="module" crossorigin src="/wonka_world_candy_match_landing_page/commonHelpers.js"></script>
     <link rel="modulepreload" crossorigin href="/wonka_world_candy_match_landing_page/assets/vendor-af36df9a.js">
-    <link rel="modulepreload" crossorigin href="/wonka_world_candy_match_landing_page/assets/main-432eac8d.js">
-    <link rel="stylesheet" href="/wonka_world_candy_match_landing_page/assets/main-83c39b33.css">
+    <link rel="modulepreload" crossorigin href="/wonka_world_candy_match_landing_page/assets/main-d9da2e4b.js">
+    <link rel="stylesheet" href="/wonka_world_candy_match_landing_page/assets/main-bf8f2945.css">
   </head>
   <body>
     <header>
@@ -134,7 +134,7 @@
       </button>
     </div>
     <!-- MOBILE NAVIGATION -->
-    <ul class="menu-list">
+    <ul class="menu-list" id="mobile-menu">
       <li class="menu-list-item">
         <a class="menu-list-link js-link js-close-menu" href="./index.html#home"
           >Home</a
@@ -185,6 +185,7 @@
 <section class="home-section section" id="home">
   <div class="container home-section-container">
     <!-- HOME TITLE -->
+    <h2 class="section-title visually-hidden" data-text="Hero">Hero</h2>
     <div class="home-title-wrapper">
       <picture>
         <source
@@ -278,22 +279,33 @@
       rel="noopener noreferrer"
       title="mobile game wonka"
     >
-      <picture>
+      <picture class="home-button-icon">
         <source
-          srcset="data:image/webp;base64,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 1x, /wonka_world_candy_match_landing_page/assets/hero-google-pic@2x-39aa4cfd.webp 2x"
+          srcset="/wonka_world_candy_match_landing_page/assets/hero-google-pic-desktop@1x-fb1ff4f8.webp 1x, /wonka_world_candy_match_landing_page/assets/hero-google-pic-desktop@2x-ca2e9c20.webp 2x"
+          media="(min-width: 1440px)"
+          type="image/webp"
+        />
+        <source
+          srcset="/wonka_world_candy_match_landing_page/assets/hero-google-pic-desktop@1x-a6e0c20b.png 1x, /wonka_world_candy_match_landing_page/assets/hero-google-pic-desktop@2x-4b829000.png 2x"
+          media="(min-width: 1440px)"
+        />
+        <source
+          srcset="/wonka_world_candy_match_landing_page/assets/hero-google-pic-mobile@1x-ef64c775.webp 1x, /wonka_world_candy_match_landing_page/assets/hero-google-pic-mobile@2x-c5bc50e8.webp 2x"
           media="(min-width: 320px)"
           type="image/webp"
         />
         <source
-          srcset="/wonka_world_candy_match_landing_page/assets/hero-google-pic@1x-985e2c8a.png 1x, /wonka_world_candy_match_landing_page/assets/hero-google-pic@2x-598727d9.png 2x"
+          srcset="/wonka_world_candy_match_landing_page/assets/hero-google-pic-mobile@1x-03270f72.png 1x, /wonka_world_candy_match_landing_page/assets/hero-google-pic-mobile@2x-6c504b10.png 2x"
           media="(min-width: 320px)"
         />
 
         <img
           class="home-google-icon"
-          src="/wonka_world_candy_match_landing_page/assets/hero-google-pic@1x-985e2c8a.png"
+          src="/wonka_world_candy_match_landing_page/assets/hero-google-pic-mobile@1x-03270f72.png"
           alt="google play icon"
           loading="lazy"
+          width="36"
+          height="36"
         />
       </picture>
       <span>Get it on<span class="home-button-text">Google Play</span></span></a
@@ -1071,22 +1083,33 @@
       rel="noopener noreferrer"
       title="mobile game wonka"
     >
-      <picture>
+      <picture class="home-button-icon">
         <source
-          srcset="data:image/webp;base64,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 1x, /wonka_world_candy_match_landing_page/assets/hero-google-pic@2x-39aa4cfd.webp 2x"
+          srcset="/wonka_world_candy_match_landing_page/assets/hero-google-pic-desktop@1x-fb1ff4f8.webp 1x, /wonka_world_candy_match_landing_page/assets/hero-google-pic-desktop@2x-ca2e9c20.webp 2x"
+          media="(min-width: 1440px)"
+          type="image/webp"
+        />
+        <source
+          srcset="/wonka_world_candy_match_landing_page/assets/hero-google-pic-desktop@1x-a6e0c20b.png 1x, /wonka_world_candy_match_landing_page/assets/hero-google-pic-desktop@2x-4b829000.png 2x"
+          media="(min-width: 1440px)"
+        />
+        <source
+          srcset="/wonka_world_candy_match_landing_page/assets/hero-google-pic-mobile@1x-ef64c775.webp 1x, /wonka_world_candy_match_landing_page/assets/hero-google-pic-mobile@2x-c5bc50e8.webp 2x"
           media="(min-width: 320px)"
           type="image/webp"
         />
         <source
-          srcset="/wonka_world_candy_match_landing_page/assets/hero-google-pic@1x-985e2c8a.png 1x, /wonka_world_candy_match_landing_page/assets/hero-google-pic@2x-598727d9.png 2x"
+          srcset="/wonka_world_candy_match_landing_page/assets/hero-google-pic-mobile@1x-03270f72.png 1x, /wonka_world_candy_match_landing_page/assets/hero-google-pic-mobile@2x-6c504b10.png 2x"
           media="(min-width: 320px)"
         />
 
         <img
           class="home-google-icon"
-          src="/wonka_world_candy_match_landing_page/assets/hero-google-pic@1x-985e2c8a.png"
+          src="/wonka_world_candy_match_landing_page/assets/hero-google-pic-mobile@1x-03270f72.png"
           alt="google play icon"
           loading="lazy"
+          width="36"
+          height="36"
         />
       </picture>
 
