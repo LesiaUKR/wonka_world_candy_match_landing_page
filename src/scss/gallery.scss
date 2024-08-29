@@ -7,6 +7,7 @@
 
 .gallery-swiper-container.container {
   position: relative;
+
   &::before {
     @include blik();
     top: -76px;
@@ -33,9 +34,9 @@
 
 .gallery-swiper-box {
   margin: 0 auto;
-  width: 288px;
+  width: 292px;
   @include media(desktop) {
-    width: 1076px;
+    width: 1092px;
   }
 }
 
@@ -45,7 +46,7 @@
   border-radius: 8px;
   @include media(desktop) {
     border-radius: 16px;
-    padding: 8px;
+    padding: 8px 8px 0 8px;
   }
 }
 
@@ -109,7 +110,7 @@
 }
 
 .gallery-swiper .gallery-swiper-button-next {
-  right: 72px;
+  right: 70px;
 
   &::after {
     background-image: url(../img/reviews/fluent_arrow-next.png);
@@ -117,7 +118,7 @@
 }
 
 .gallery-swiper .gallery-swiper-button-prev {
-  left: 72px;
+  left: 70px;
 
   &::after {
     background-image: url(../img/reviews/fluent_arrow-prev.png);
@@ -155,6 +156,11 @@
     line-height: 20px;
     background: $_main_color;
     opacity: 1;
+
+    @include media(desktop) {
+      width: 12px;
+      height: 12px;
+    }
   }
 }
 
