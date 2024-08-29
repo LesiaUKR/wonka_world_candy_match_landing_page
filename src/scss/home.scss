@@ -1,8 +1,7 @@
 .home-section.section {
   position: relative;
-  padding-top: 100px;
+  padding: 100px 0 30px;
   text-align: center;
-
   &::after {
     @include blik();
     top: 200px;
@@ -26,7 +25,7 @@
 .home-title-wrapper {
   min-height: 106px;
   min-width: 282px;
-  margin: 0 auto 55px;
+  margin: 0 auto 54px;
   @include media(desktop) {
     margin: 0 0 72px;
     padding-top: 52px;
@@ -80,7 +79,7 @@
   align-items: center;
   gap: 8px;
   margin: 0 auto;
-  padding: 10px 16px 10px 24px;
+  padding: 10px 16px 10px 22px;
   min-width: 170px;
   max-width: -moz-fit-content;
   max-width: fit-content;
@@ -103,7 +102,7 @@
   @include media(desktop) {
     @include font(16, 19);
     margin-left: 0;
-    gap: 11px;
+    gap: 10px;
 
     &::after {
       position: absolute;
@@ -137,15 +136,6 @@
         filter: blur(0);
       }
     }
-  }
-}
-
-.home-google-icon {
-  width: 36px;
-  height: 36px;
-  @include media(desktop) {
-    width: 29px;
-    height: 27px;
   }
 }
 

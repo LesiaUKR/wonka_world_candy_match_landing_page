@@ -58,12 +58,14 @@
 }
 
 .about-img-wrapper {
+  min-height: 136px;
   border-radius: 8px;
   border: 2px solid $_yellow_color;
   overflow: hidden;
   @include media(desktop) {
     flex-shrink: 0;
-    max-width: 744px;
+    height: 313px;
+    width: 744px;
     border-radius: 24px;
   }
 }
