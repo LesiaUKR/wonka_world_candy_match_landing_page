@@ -24,13 +24,13 @@
 }
 
 .home-title-wrapper {
-  min-height: 104px;
-  max-width: 282px;
+  min-height: 106px;
+  min-width: 282px;
   margin: 0 auto 55px;
   @include media(desktop) {
     margin: 0 0 72px;
     padding-top: 52px;
-    max-height: 288px;
+    min-height: 288px;
     max-width: 660px;
     overflow: hidden;
   }
