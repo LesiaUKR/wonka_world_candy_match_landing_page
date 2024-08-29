@@ -88,15 +88,21 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 90px;
-    height: 90px;
+    width: 92px;
+    height: 92px;
     background-color: transparent;
     outline: 1px solid $_yellow_color;
     border-radius: 50%;
-    border: none;
+
     top: 50%;
     transform: translateY(-50%);
     transition: background-color $animation-reveal;
+
+    &:focus-visible {
+      outline: 2px solid $_yellow_color;
+      transform: scale(1.1) translateY(-50%);
+    }
+
     &::after {
       content: '';
       display: block;
@@ -114,6 +120,10 @@
 
   &::after {
     background-image: url(../img/reviews/fluent_arrow-next.png);
+
+    &:focus-visible {
+      scale: 1px;
+    }
   }
 }
 
