@@ -89,10 +89,7 @@ header .container {
     border-radius: 24px;
   }
 }
-// .nav-logo-icon {
-//   width: 100%;
-//   height: 100%;
-// }
+
 
 .nav-logo-text {
   display: none;
@@ -143,7 +140,7 @@ header .container {
       outline: 1px solid $_yellow_color;
       outline-offset: 1px;
     }
-    &:focus:active {
+    &:focus:not(:focus-visible) {
       outline: none;
     }
   }
